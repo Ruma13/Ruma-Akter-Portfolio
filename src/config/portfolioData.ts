@@ -22,8 +22,7 @@ export const PORTFOLIO_INFO: Portfolio = {
     // optional hero summary used in the site hero; keeps a concise, senior-level intro tuned to your data
     hero: {
       summary:
-        "Turning data into actionable insights through SQL, Python, Power BI, and Excel. I build interactive dashboards, analyze datasets, and create data-driven solutions that support informed business decisions."
-",
+        "Turning data into actionable insights through SQL, Python, Power BI, and Excel. I build interactive dashboards, analyze datasets, and create data-driven solutions that support informed business decisions.",
     },
     contact: {
       email: "rumapiasi13@gmail.com",

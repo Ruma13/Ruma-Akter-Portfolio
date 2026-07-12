@@ -4,62 +4,179 @@ export const PORTFOLIO_INFO: Portfolio = {
   meta: {
     createdAt: new Date().toISOString(),
     locale: "en-US",
-    url: "https://satya00089.github.io/portfolio", // update if you have a custom domain
-    pdf: "/resume.pdf",
+    url: "https://RumaAkter.github.io", // update if you have a custom domain
+    pdf: "/Ruma_Akter_Resume.pdf",
   },
   personal: {
-    name: "Satya Subudhi",
-    title: "Senior Engineer — Full Stack (Python & React)",
-    headline: "React · Python · FastAPI · IaC · Cloud",
+    name: "Ruma Akter",
+    title: "Data Analyst",
+    headline: "MySQL · Python · Power BI · ETL ",
     // avatar can be a string, an object with { url, label }, or an array of those.
     avatar: [
       // use public root path so Vite serves the static asset from /public/profile.jpg
-      { url: "./profile.jpg", label: "" },
-      { url: "./profile1.jpg", label: "" },
+      { url: "./Profile-place.png", label: "" },
+      { url: "./portfolio_img.jfif", label: "" },
     ],
     summary:
-      "Senior Engineer with 7+ years of experience delivering enterprise-grade applications. Over the last 3 years I have focused on building production systems using Python (FastAPI) and React — designing APIs, building responsive frontends, and automating deployments with IaC. Experienced across AWS & Azure and comfortable owning full delivery from design to production.",
+      "Computer Science and Engineering graduate with internship experience in Software Testing and Game Development. Passionate about Data Analytics, with hands-on skills in SQL, Python, Power BI, Excel, and MySQL. Currently focused on building a career by transforming data into meaningful business insights.
+",
     // optional hero summary used in the site hero; keeps a concise, senior-level intro tuned to your data
     hero: {
       summary:
-        "Senior Engineer & product-focused Full Stack developer (React, TypeScript, Python/FastAPI). I design resilient component systems, build production-grade APIs, and optimize for performance and accessibility — driving features from design through delivery on cloud platforms.",
+        "Turning data into actionable insights through SQL, Python, Power BI, and Excel. I build interactive dashboards, analyze datasets, and create data-driven solutions that support informed business decisions.
+",
     },
     contact: {
-      email: "satyasubudhi089@gmail.com",
-      phone: "+91 9937 446 070",
-      location: "Bangalore, India",
-      website: "https://satya00089.github.io/portfolio",
+      email: "rumapiasi13@gmail.com",
+      phone: "+880 1400331663",
+      location: "Mirpur 11, Dhaka",
+      website: "https://RumaAkter.github.io",
       socials: [
         {
           label: "LinkedIn",
-          url: "https://www.linkedin.com/in/satya-subudhi/",
+          url: "https:https://www.linkedin.com/in/ruma-akter-326799396/",
           icon: "SiLinkedin",
         },
         {
           label: "GitHub",
-          url: "https://github.com/satya00089",
+          url: "https://github.com/Ruma13",
           icon: "SiGithub",
         },
-        {
-          label: "Hugging Face",
-          url: "https://huggingface.co/spaces/satya00089/",
-          icon: "SiHuggingface",
-        },
+       
         {
           label: "Kaggle",
-          url: "https://www.kaggle.com/satya00089",
+          url: "https://www.kaggle.com/rumaaktertushi",
           icon: "SiKaggle",
           size: 32,
         },
       ],
     },
   },
-  highlights: [
-    "Senior Engineer at Unisys (Jun 2025 – Present)",
-    "5+ years focused on Python (FastAPI) and React",
-    "Experienced with AWS, Azure, Terraform, and CI/CD pipelines",
-  ],
+ // highlights: [
+  //  "Senior Engineer at Unisys (Jun 2025 – Present)",
+    //"5+ years focused on Python (FastAPI) and React",
+    //"Experienced with AWS, Azure, Terraform, and CI/CD pipelines",
+  //],
   skills: [
+    {
+  title: "Programming Languages",
+  skills: [
+    {
+      name: "Python",
+      level: 85,
+      icon: "SiPython",
+      category: "programming",
+    },
+    {
+      name: "Java",
+      level: 65,
+      icon: "SiOpenjdk",
+      category: "programming",
+    },
+    {
+      name: "JavaScript",
+      level: 75,
+      icon: "SiJavascript",
+      category: "programming",
+    },
+    {
+      name: "TypeScript",
+      level: 60,
+      icon: "SiTypescript",
+      category: "programming",
+    },
+    {
+      name: "C",
+      level: 75,
+      icon: "SiC",
+      category: "programming",
+    },
+    {
+      name: "C++",
+      level: 75,
+      icon: "SiCplusplus",
+      category: "programming",
+    },
+    {
+      name: "C#",
+      level: 60,
+      icon: "SiCsharp",
+      category: "programming",
+    },
+  ],
+},
+    {
+    title: "Data Analytics ",
+    skills: [
+      {
+        name: "Power BI",
+        level: 90,
+        icon: "SiPowerbi",
+        category: "analytics",
+      },
+      {
+        name: "Microsoft Excel",
+        level: 90,
+        icon: "SiMicrosoftexcel",
+        category: "analytics",
+      },
+      {
+        name: "Data Analysis",
+        level: 88,
+        icon: "SiTableau",
+        category: "analytics",
+      },
+      {
+        name: "Data Visualization",
+        level: 88,
+        icon: "SiPlotly",
+        category: "analytics",
+      },
+      {
+        name: "Data Cleaning",
+        level: 85,
+        icon: "SiPandas",
+        category: "analytics",
+      },
+      {
+        name: "ETL",
+        level: 82,
+        icon: "SiApache",
+        category: "analytics",
+      },
+      {
+        name: "Dashboard Development",
+        level: 88,
+        icon: "SiPowerbi",
+        category: "analytics",
+      },
+    ],
+  },
+     {
+    title: "Libraries",
+    skills: [
+      {
+        name: "Pandas",
+        level: 88,
+        icon: "SiPandas",
+        category: "library",
+      },
+      {
+        name: "NumPy",
+        level: 82,
+        icon: "SiNumpy",
+        category: "library",
+      },
+      {
+        name: "Matplotlib",
+        level: 75,
+        icon: "SiPlotly",
+        category: "library",
+      },
+    ],
+  },
+
+
     {
       title: "Frontend",
       skills: [
@@ -109,14 +226,7 @@ export const PORTFOLIO_INFO: Portfolio = {
           years: 2,
           note: "Used in production since 2022",
         },
-        {
-          name: "Material-UI",
-          level: 80,
-          icon: "SiMaterialui",
-          category: "frontend",
-          years: 2,
-          note: "Used in production since 2022",
-        },
+       
       ],
     },
     {
@@ -146,22 +256,7 @@ export const PORTFOLIO_INFO: Portfolio = {
           years: 3,
           note: "Used in production since 2021",
         },
-        {
-          name: "Express.js",
-          level: 75,
-          icon: "SiExpress",
-          category: "backend",
-          years: 3,
-          note: "Used in production since 2021",
-        },
-        {
-          name: "Java (Vert.x)",
-          level: 70,
-          icon: "SiJava",
-          category: "backend",
-          years: 3,
-          note: "Used in production from 2018-2021",
-        },
+        
       ],
     },
     {
@@ -207,13 +302,7 @@ export const PORTFOLIO_INFO: Portfolio = {
           years: 2,
           note: "Used in production since 2022",
         },
-        {
-          name: "RAG",
-          level: 70,
-          category: "data",
-          years: 1,
-          note: "Built POCs using LangChain and LlamaIndex",
-        },
+       
       ],
     },
     {
@@ -295,259 +384,314 @@ export const PORTFOLIO_INFO: Portfolio = {
           years: 3,
           note: "Used in production since 2021",
         },
-        {
-          name: "Couchbase",
-          level: 70,
-          icon: "SiCouchbase",
-          category: "database",
-          years: 2,
-          note: "Used in production from 2019-2021",
-        },
+        
       ],
     },
     {
-      title: "Other Tools",
-      skills: [
-        {
-          name: "Git",
-          level: 90,
-          icon: "SiGit",
-          category: "tooling",
-          years: 7,
-          note: "Used in production since 2016",
-        },
-        {
-          name: "GitHub",
-          level: 88,
-          icon: "SiGithub",
-          category: "tooling",
-          years: 7,
-          note: "Used in production since 2016",
-        },
-        {
-          name: "Jira",
-          level: 85,
-          icon: "SiJira",
-          category: "tooling",
-          years: 5,
-          note: "Used in production since 2018",
-        },
-        {
-          name: "Confluence",
-          level: 80,
-          icon: "SiConfluence",
-          category: "tooling",
-          years: 5,
-          note: "Used in production since 2018",
-        },
-        {
-          name: "VS Code",
-          level: 90,
-          icon: "SiVisualstudiocode",
-          category: "tooling",
-          years: 7,
-          note: "Used in production since 2016",
-        },
-      ],
-    },
-  ],
+    title: "Software Testing (SQA)",
+    skills: [
+      {
+        name: "Manual Testing",
+        level: 90,
+        icon: "SiTestinglibrary",
+        category: "testing",
+      },
+      {
+        name: "Test Case Design",
+        level: 88,
+        icon: "SiTestinglibrary",
+        category: "testing",
+      },
+      {
+        name: "Bug Reporting",
+        level: 90,
+        icon: "SiBugatti",
+        category: "testing",
+      },
+      {
+        name: "SDLC",
+        level: 85,
+        icon: "SiProcesswire",
+        category: "testing",
+      },
+      {
+        name: "STLC",
+        level: 85,
+        icon: "SiProcesswire",
+        category: "testing",
+      },
+      {
+        name: "Agile Scrum",
+        level: 80,
+        icon: "SiJira",
+        category: "testing",
+      },
+      {
+        name: "API Testing",
+        level: 82,
+        icon: "SiPostman",
+        category: "testing",
+      },
+      {
+        name: "Postman",
+        level: 85,
+        icon: "SiPostman",
+        category: "testing",
+      },
+      {
+        name: "Selenium",
+        level: 70,
+        icon: "SiSelenium",
+        category: "testing",
+      },
+      {
+        name: "Playwright",
+        level: 65,
+        icon: "SiPlaywright",
+        category: "testing",
+      },
+      {
+        name: "JMeter",
+        level: 70,
+        icon: "SiApachejmeter",
+        category: "testing",
+      },
+      {
+        name: "Jira",
+        level: 85,
+        icon: "SiJira",
+        category: "testing",
+      },
+    ],
+  },
+
+  {
+    title: "Tools",
+    skills: [
+      {
+        name: "Git",
+        level: 80,
+        icon: "SiGit",
+        category: "tools",
+      },
+      {
+        name: "GitHub",
+        level: 82,
+        icon: "SiGithub",
+        category: "tools",
+      },
+      {
+        name: "Jupyter Notebook",
+        level: 88,
+        icon: "SiJupyter",
+        category: "tools",
+      },
+      {
+        name: "Google Colab",
+        level: 90,
+        icon: "SiGooglecolab",
+        category: "tools",
+      },
+      {
+      name: "Unity",
+      level: 80,
+      icon: "SiUnity",
+      category: "tools",
+      },
+      
+      {
+        name: "DBeaver",
+        level: 85,
+        icon: "SiDatabricks",
+        category: "tools",
+      },
+      {
+        name: "VS Code",
+        level: 90,
+        icon: "SiVisualstudiocode",
+        category: "tools",
+      },
+    ],
+  },
+],
   experience: [
-    {
-      id: "unisys-senior-2025",
-      title: "Senior Engineer",
-      company: "Unisys",
-      location: "Bengaluru, India",
-      date: { start: "2025-06", present: true },
-      summary:
-        "Leading full-stack efforts around Python-based backends and React frontends for enterprise customers. Driving architecture, mentoring teammates and implementing IaC and cloud deployment practices.",
-      bullets: [
-        "Lead development of microservices using FastAPI and Python for enterprise-scale workloads.",
-        "Design and implement responsive React frontends and component libraries with TypeScript and Tailwind.",
-        "Drive IaC adoption using Terraform and Bicep; implement CI/CD pipelines and deployment automation.",
-        "Mentor engineers, conduct design reviews, and improve code quality and observability.",
-      ],
-      tech: [
-        "Python",
-        "FastAPI",
-        "React",
-        "TypeScript",
-        "Terraform",
-        "AWS",
-        "Azure",
-      ],
-    },
-    {
-      id: "unisys-se-2022",
-      title: "Software Engineer",
-      company: "Unisys",
-      location: "Bengaluru, India",
-      date: { start: "2022-01", end: "2025-05" },
-      summary:
-        "Worked on web and desktop applications, cloud deployment tooling, and multi-cloud automation for Unisys products.",
-      bullets: [
-        "Built desktop and web UI features using React, Electron.js, TypeScript and Node.js.",
-        "Implemented cloud deployment workflows for Azure (ARM) and AWS (CloudFormation).",
-        "Improved code quality and CI pipelines, addressing SonarQube findings and standardizing testing.",
-        "Delivered features around redeployment, resource deletions and automation across cloud providers.",
-      ],
-      tech: ["React", "Electron", "TypeScript", "Node.js", "Azure", "AWS"],
-    },
-    {
-      id: "unisys-rae-aircore",
-      title: "Software Engineer (RAE, AirCore projects)",
-      company: "Unisys",
-      location: "Bengaluru, India",
-      date: { start: "2018-03", end: "2021-12" },
-      summary:
-        "Worked on UI and backend components for airline/travel solutions and internal tooling.",
-      bullets: [
-        "Developed front-end UIs using Angular and React and integrated with Unisys Design System.",
-        "Built REST APIs using Java (Vert.x) and integrated with NoSQL stores (MongoDB, Couchbase).",
-        "Implemented role-based access with Keycloak and developed data visualization tools.",
-        "Contributed to NDC stabilization, import/export features and product maintenance.",
-      ],
-      tech: [
-        "Angular",
-        "React",
-        "Java (Vert.x)",
-        "MongoDB",
-        "Couchbase",
-        "Keycloak",
-      ],
-    },
-  ],
+  {
+    id: "goinnovior-sqa-2025",
+    title: "Software Quality Assurance Intern",
+    company: "Goinnovior Limited",
+    location: "Mirpur DOHS, Dhaka, Bangladesh",
+    date: { start: "2025-12", end: "2026-03" },
+    summary:
+      "Contributed to software quality assurance by performing manual and API testing, documenting defects, and collaborating with development teams to improve product quality.",
+
+    bullets: [
+      "Analyzed software testing results to identify recurring defects and improve application quality.",
+      "Documented bugs with severity levels, reproduction steps, and supporting evidence using Jira.",
+      "Prepared detailed test reports and collaborated with cross-functional teams to monitor defect trends.",
+      "Performed functional, UI, smoke, and regression testing while maintaining accurate testing documentation.",
+      "Conducted API testing using Postman and utilized Browser DevTools for debugging and network analysis.",
+    ],
+
+    tech: [
+      "Manual Testing",
+      "Jira",
+      "Postman",
+      "Browser DevTools",
+      "API Testing",
+      "Regression Testing",
+      "Smoke Testing",
+    ],
+  },
+
+  {
+    id: "batterylow-arvr-2025",
+    title: "AR/VR Game Development Intern",
+    company: "Battery Low Interactive Ltd",
+    location: "Baridhara, Dhaka, Bangladesh",
+    date: { start: "2025-10", end: "2025-11" },
+
+    summary:
+      "Developed and delivered an AR mobile application using Unity, contributing to application development, testing, and deployment.",
+
+    bullets: [
+      "Designed and developed an AR mobile application using Unity.",
+      "Built and delivered an Android APK for internal testing and demonstration.",
+      "Collaborated with the development team to implement features and resolve issues.",
+      "Participated in application testing, debugging, and deployment activities.",
+    ],
+
+    tech: [
+      "Unity",
+      "C#",
+      "AR",
+      "Android",
+      "Mobile Development",
+    ],
+  },
+],
+  certifications: [
+  {
+    id: "data-analyst-sql-python",
+    title: "Data Analyst with SQL and Python",
+    issuer: "Farhan's Academy",
+    issueDate: "2025-03",
+    credential: "",
+    description:
+      "Completed hands-on training in SQL, Python, data analysis, data cleaning, and data visualization. Developed practical skills through real-world datasets and analytics projects.",
+    skills: [
+      "SQL",
+      "Python",
+      "Data Analysis",
+      "Data Cleaning",
+      "Data Visualization",
+      "Pandas",
+      "Power BI",
+    ],
+  },
+  {
+    id: "job-ready-employability",
+    title: "Job Ready: Employability Skills at the Basic",
+    issuer: "Wadhwani Foundation",
+    issueDate: "2025-12",
+    credential: "",
+    description:
+      "Completed training focused on workplace communication, teamwork, problem-solving, professionalism, and career readiness.",
+    skills: [
+      "Communication",
+      "Teamwork",
+      "Problem Solving",
+      "Professionalism",
+      "Career Readiness",
+    ],
+  },
+],
   projects: [
-    {
-      id: "learn-algo",
-      title: "Learn Algo",
-      description:
-        "Interactive visualizations that transform abstract concepts into intuitive understanding. Watch sorting, searching, and ML algorithms execute step-by-step.",
-      tags: ["Algorithms", "DSA", "ML", "AI", "Visualization", "Next.js"],
-      image:
-        "https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExYXpqYWFhbnBraWt3ZXhvajZsdjg5andyMGZzY2VibGg3bXE0MWxwayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/2PuPWxuLV1FGyh03Ja/giphy.gif",
-      href: "https://www.learn-algo.com",
-      links: [
-        {
-          label: "GitHub",
-          url: "https://github.com/satya00089/learn-algo",
-          icon: "SiGithub",
-        },
-      ],
-      isUnderDevelopment: false,
-    },
-    {
-      id: "landing-zone-orchestrator",
-      title: "Landing Zone Orchestrator",
-      description:
-        "A production-ready platform that transforms cloud infrastructure provisioning from manual IaC coding to an intuitive, form-driven workflow. Built with React, FastAPI, and MongoDB to generate validated Terraform templates for AWS, Azure, and GCP. Features include schema-driven form builder for VPC, Subnets, IAM, and networking resources, real-time Terraform code generation and validation, JWT-based authentication, MongoDB storage for projects and templates, and multi-cloud support.",
-      tags: [
-        "Terraform",
-        "IaC",
-        "React",
-        "FastAPI",
-        "MongoDB",
-        "AWS",
-        "Azure",
-        "Full Stack",
-      ],
-      image:
-        "https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZGtuYjY1emtsZmNjMXp1czdrdXR5bXE5ZDJheHVvZjY1azZxYnJieiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/qzImRjQVb2OUI84mTt/giphy.gif",
-      href: "https://orchestrator.next-zen.dev",
-      links: [
-        {
-          label: "GitHub",
-          url: "https://github.com/satya00089/landing-zone-orchestrator-ui",
-          icon: "SiGithub",
-        },
-      ],
-      isUnderDevelopment: true,
-    },
-    {
-      id: "diagrammatic",
-      title: "Diagrammatic",
-      description:
-        "Diagrammatic (System Design Playground): A component library and living documentation for a design system.",
-      tags: ["System Design", "AI & ML", "React"],
-      image:
-        "https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExeTFnOGF3d3BodjFvY3NhanY5cnl5bmd4Z243aXB5M3hrOHg3d2tmeiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/WvzQektcJxs0oDFkHq/giphy.gif",
-      href: "https://diagrammatic.next-zen.dev",
-      links: [
-        {
-          label: "GitHub",
-          url: "https://github.com/satya00089/diagrammatic",
-          icon: "SiGithub",
-        },
-      ],
-    },
-    {
-      id: "tic-tac-toe-ai",
-      title: "Tic Tac Toe AI",
-      description:
-        "A minimal Tic-Tac-Toe AI game built with Next.js to understand the Minimax algorithm.",
-      tags: ["Next.js", "AI", "Game", "Minimax"],
-      image:
-        "https://raw.githubusercontent.com/satya00089/tic-tac-toe/main/public/tic-tac-toe.png",
-      href: "https://satya00089.github.io/tic-tac-toe/",
-      links: [
-        {
-          label: "GitHub",
-          url: "https://github.com/satya00089/tic-tac-toe",
-          icon: "SiGithub",
-        },
-      ],
-      isUnderDevelopment: false,
-    },
-    {
-      id: "mui-color-wheel",
-      title: "MUI Color Wheel",
-      description:
-        "A Material-UI based color wheel component with real-time color picking.",
-      tags: ["React", "Material-UI", "NPM Package", "Storybook"],
-      image:
-        "https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExYTJxYjhmdTVjam41aWlzczZreGZ2eXc5eThjdDRpMXgxYzVuYTAzMiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/tWnCyw4rmoFY8CmhLV/giphy.gif",
-      href: "https://mui-color-wheel.vercel.app/",
-      links: [
-        {
-          label: "Storybook",
-          url: "https://mui-color-wheel.vercel.app/",
-          icon: "SiStorybook",
-        },
-        {
-          label: "NPM",
-          url: "https://www.npmjs.com/package/mui-color-wheel",
-          icon: "SiNpm",
-        },
-        {
-          label: "GitHub",
-          url: "https://github.com/satya00089/mui-color-wheel",
-          icon: "SiGithub",
-        },
-      ],
-      isUnderDevelopment: true,
-    },
-    {
-      id: "alochona",
-      title: "Alochona",
-      description:
-        "Alochona is an experimental chatbot hosted on Hugging Face Spaces. It uses OpenAI under the hood for responses. This project was built as a way to explore chatbot UIs, Hugging Face deployment, and integrating OpenAI APIs.",
-      image:
-        "https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExZmc5dDY1c2ZnOGs0ODF0eDkwbzBvMHZ2ZXJvYml2amRmdzN2dnZueSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/7AFQj6uviWpwudbOWg/giphy.gif",
-      href: "https://huggingface.co/spaces/satya00089/alochona",
-      links: [
-        {
-          label: "Huggingface",
-          url: "https://huggingface.co/spaces/satya00089/alochona/tree/main",
-          icon: "SiHuggingface",
-        },
-        {
-          label: "GitHub",
-          url: "https://github.com/satya00089/alochona",
-          icon: "SiGithub",
-        },
-      ],
-      tags: ["Chatbot", "OpenAI", "Hugging Face", "Beginner Project"],
-    },
-    {
+  {
+    id: "retail-sales-performance",
+    title: "Retail Sales Performance & Customer Behavior Analytics",
+    description:
+      "Developed an interactive sales analytics dashboard to evaluate revenue, customer purchasing behavior, product performance, and sales trends. Performed data cleaning, transformation, and analysis using SQL, Python, Excel, and Power BI to deliver actionable business insights for data-driven decision-making.",
+
+    tags: [
+      "Python",
+      "Excel",
+      "EDA",
+      "Data Visualization",
+      "Retail Analytics",
+    ],
+
+    image: "./retail-sales-dashboard.png",
+
+    links: [
+      {
+        label: "GitHub",
+        url: "https://github.com/Ruma13/Sales-Data-Analysis",
+        icon: "SiGithub",
+      },
+    ],
+
+    isUnderDevelopment: false,
+  },
+
+  {
+    id: "online-banking-dashboard",
+    title: "Online Banking Performance Dashboard",
+    description:
+      "Designed an interactive banking dashboard to analyze transaction trends, customer activity, account performance, and financial metrics. Utilized SQL for data extraction, Python for preprocessing, and Power BI for creating insightful visualizations that support business reporting and operational decisions.",
+
+    tags: [
+      "Power BI",
+      "SQL",
+      "Python",
+      "MySQL",
+      "ETL",
+      "Banking Analytics",
+      "Dashboard",
+    ],
+
+    image: "/public/online-banking-dashboard.png",
+
+    links: [
+      {
+        label: "GitHub",
+        url: "https://github.com/Ruma13/Online_Banking_DashBoard",
+        icon: "SiGithub",
+      },
+    ],
+
+    isUnderDevelopment: false,
+  },
+
+  {
+    id: "restaurant-revenue-analytics",
+    title: "Restaurant Revenue & Customer Loyalty Analytics",
+    description:
+      "Built a business intelligence dashboard to analyze restaurant revenue, customer loyalty, order trends, and menu performance. Leveraged SQL, Python, Excel, and Power BI to transform raw data into meaningful insights that help improve customer retention and business performance.",
+
+    tags: [
+      "Power BI",
+      "SQL",
+      "Python",
+      "Excel",
+      "Restaurant Analytics",
+      "Customer Analytics",
+      "ETL",
+    ],
+
+    image: "/public/restaurant-dashboard.png",
+
+    links: [
+      {
+        label: "GitHub",
+        url: "https://github.com/Ruma13/Kacci.com_DashBoard",
+        icon: "SiGithub",
+      },
+    ],
+
+    isUnderDevelopment: false,
+  },
+],
+   /* {
       id: "night-sky",
       title: "Night Skyline",
       description:
@@ -570,75 +714,94 @@ export const PORTFOLIO_INFO: Portfolio = {
       ],
       isUnderDevelopment: true,
     },
-  ],
+  ], */
   education: [
     {
-      degree: "B.Tech in Computer Science Engineering",
-      school: "Biju Patnaik University of Technology",
-      date: "2013-2017",
+      degree: "B.Sc. in Computer Science Engineering",
+      school: "Green University Of Bangladesh",
+      date: "2022-2026",
+      CGPA: 3.38,
     },
     {
       degree: "Higher Secondary",
-      school: "Bellaguntha Science College",
-      date: "2011-2013",
+      school: "Govt. Tolaram College ",
+      date: "2018-2020",
+      GPA: 5.00,
     },
     {
-      degree: "High School",
-      school: "G.T High School Bellaguntha",
-      date: "2011",
+      degree: "Secondary School",
+      school: "Kachpur Omar Ali High School ",
+      date: "2017",
+      GPA: 4.77,
     },
   ],
-  certifications: [
-    {
-      name: "Microsoft Certified: Azure Fundamentals (AZ-900)",
-      issuer: "Microsoft",
-      date: "2022",
-      url: "https://www.credly.com/badges/56ba404b-b2ec-49d7-b869-d41c8c88d7b5",
-    },
-    {
-      name: "Terraform Associate",
-      issuer: "HashiCorp",
-      date: "2023",
-    },
-  ],
+ 
   extras: {
-    languages: [{ name: "English", level: "Native" }],
+    languages: [{ name: "Bangla", level: "Native" },{ name: "English", level: "Upper Intermediate (B2)" }],
     interests: ["astronomy", "music"],
   },
 };
 
 // ---------- SMALL HELPERS ----------
 export const tagColors: TagColors = {
-  React: "bg-blue-100 text-blue-800",
-  CSS: "bg-teal-100 text-teal-800",
-  CSS3: "bg-teal-100 text-teal-800",
-  Tailwind: "bg-teal-100 text-teal-800",
-  Stripe: "bg-purple-100 text-purple-800",
-  "Design System": "bg-yellow-100 text-yellow-800",
-  D3: "bg-amber-100 text-amber-800",
-  Realtime: "bg-green-100 text-green-800",
-  Storybook: "bg-pink-100 text-pink-800",
-  "NPM Package": "bg-red-100 text-red-800",
-  "Material-UI": "bg-indigo-100 text-indigo-800",
-  Chatbot: "bg-violet-100 text-violet-800",
-  OpenAI: "bg-gray-100 text-gray-800",
-  "Hugging Face": "bg-orange-100 text-orange-800",
-  Beginner: "bg-cyan-100 text-cyan-800",
-  "Beginner Project": "bg-cyan-100 text-cyan-800",
-  // Landing Zone Orchestrator tags
-  FastAPI: "bg-teal-500 text-white",
-  MongoDB: "bg-green-600 text-white",
-  Terraform: "bg-purple-600 text-white",
-  IaC: "bg-indigo-500 text-white",
-  AWS: "bg-orange-500 text-white",
-  Azure: "bg-blue-600 text-white",
-  GCP: "bg-red-600 text-white",
-  Algorithms: "bg-blue-500 text-blue-100",
-  DSA: "bg-purple-300 text-purple-900",
-  ML: "bg-blue-200 text-blue-800",
-  AI: "bg-gray-200 text-gray-800",
-  "AI & ML": "bg-amber-100 text-amber-900",
-  Visualization: "bg-orange-100 text-purple-900",
-  "Next.js": "bg-black text-white",
-  "Full Stack": "bg-gradient-to-r from-blue-500 to-purple-600 text-white",
+  // Programming Languages
+  Python: "bg-yellow-100 text-yellow-800",
+  SQL: "bg-blue-100 text-blue-800",
+  MySQL: "bg-sky-100 text-sky-800",
+  Java: "bg-red-100 text-red-800",
+  JavaScript: "bg-yellow-200 text-yellow-900",
+  TypeScript: "bg-blue-200 text-blue-900",
+  "C++": "bg-indigo-100 text-indigo-800",
+  C: "bg-gray-200 text-gray-800",
+  "C#": "bg-purple-100 text-purple-800",
+
+  // Data Analytics
+  "Power BI": "bg-yellow-300 text-yellow-900",
+  Excel: "bg-green-100 text-green-800",
+  ETL: "bg-indigo-100 text-indigo-800",
+  "Data Analysis": "bg-blue-100 text-blue-800",
+  "Data Visualization": "bg-purple-100 text-purple-800",
+  "Data Cleaning": "bg-cyan-100 text-cyan-800",
+  Dashboard: "bg-pink-100 text-pink-800",
+  "Dashboard Development": "bg-pink-100 text-pink-800",
+
+  // Python Libraries
+  Pandas: "bg-indigo-200 text-indigo-900",
+  NumPy: "bg-blue-200 text-blue-900",
+  Matplotlib: "bg-orange-100 text-orange-800",
+
+  // Business Domains
+  "Retail Analytics": "bg-orange-100 text-orange-800",
+  "Banking Analytics": "bg-green-100 text-green-800",
+  "Restaurant Analytics": "bg-red-100 text-red-800",
+  "Customer Analytics": "bg-pink-100 text-pink-800",
+  "Sales Analytics": "bg-teal-100 text-teal-800",
+  Healthcare: "bg-red-200 text-red-900",
+
+  // SQA
+  "Manual Testing": "bg-red-100 text-red-800",
+  "API Testing": "bg-orange-100 text-orange-800",
+  Postman: "bg-orange-200 text-orange-900",
+  Selenium: "bg-green-200 text-green-900",
+  Playwright: "bg-lime-100 text-lime-800",
+  Jira: "bg-blue-200 text-blue-900",
+  JMeter: "bg-red-200 text-red-900",
+  "Regression Testing": "bg-purple-200 text-purple-900",
+  "Smoke Testing": "bg-yellow-100 text-yellow-900",
+  SDLC: "bg-gray-200 text-gray-900",
+  STLC: "bg-gray-300 text-gray-900",
+  "Agile Scrum": "bg-teal-100 text-teal-900",
+
+  // Tools
+  Git: "bg-orange-100 text-orange-800",
+  GitHub: "bg-gray-800 text-white",
+  Unity: "bg-gray-900 text-white",
+  "VS Code": "bg-blue-100 text-blue-800",
+  "Google Colab": "bg-yellow-100 text-yellow-900",
+  "Jupyter Notebook": "bg-orange-100 text-orange-900",
+  DBeaver: "bg-teal-100 text-teal-800",
+
+  // General
+  Analytics: "bg-blue-100 text-blue-800",
+  Visualization: "bg-purple-100 text-purple-800",
 };

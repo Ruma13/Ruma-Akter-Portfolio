@@ -66,13 +66,14 @@ export type Skill = {
   level?: number; // 1-10 or %
   years?: number; // years of experience
   category?:
-    | "frontend"
+    | "Programming"
     | "backend"
+    | "Tools"
     | "data"
-    | "devops"
-    | "tooling"
+    | "Software"
+    | "Libraries"
     | "database"
-    | "other";
+    | "AI";
   note?: string; // optional note e.g. "used at work since 2020"
 };
 

@@ -644,19 +644,19 @@ export const PORTFOLIO_INFO: Portfolio = {
       degree: "B.Sc. in Computer Science Engineering",
       school: "Green University Of Bangladesh",
       date: "2022-2026",
-      CGPA: 3.38,
+      
     },
     {
       degree: "Higher Secondary",
       school: "Govt. Tolaram College ",
       date: "2018-2020",
-      GPA: 5.00,
+      
     },
     {
       degree: "Secondary School",
       school: "Kachpur Omar Ali High School ",
       date: "2017",
-      GPA: 4.77,
+     
     },
   ],
  

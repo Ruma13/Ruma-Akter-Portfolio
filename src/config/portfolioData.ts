@@ -638,30 +638,7 @@ export const PORTFOLIO_INFO: Portfolio = {
     isUnderDevelopment: false,
   },
 ],
-   /* {
-      id: "night-sky",
-      title: "Night Skyline",
-      description:
-        "A breathtaking recreation of the city skyline under a starlit night sky, capturing the serene beauty and glowing atmosphere of the evening.",
-      tags: ["React", "CSS"],
-      image:
-        "https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExc2RjaHAxY3N3enY0d3RldWVpczg2ZTNzMHhsY2dpam0yYnp6bWh2byZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/P2jddT5c9g9OeHI17p/giphy.gif",
-      href: "https://satya00089.github.io/night-sky",
-      links: [
-        {
-          label: "Watch",
-          url: "https://www.loom.com/share/1516014366e34135a67f5dd4e551fec5",
-          icon: "FaPlay",
-        },
-        {
-          label: "GitHub",
-          url: "https://github.com/satya00089/night-sky",
-          icon: "SiGithub",
-        },
-      ],
-      isUnderDevelopment: true,
-    },*/
-  ], 
+
   education: [
     {
       degree: "B.Sc. in Computer Science Engineering",

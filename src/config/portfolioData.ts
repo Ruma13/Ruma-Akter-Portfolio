@@ -518,38 +518,18 @@ export const PORTFOLIO_INFO: Portfolio = {
 ],
   certifications: [
   {
-    id: "data-analyst-sql-python",
-    title: "Data Analyst with SQL and Python",
+    name: "Data Analyst with SQL and Python",
     issuer: "Farhan's Academy",
-    issueDate: "2025-03",
-    credential: "",
+    date: "March 2025",
     description:
-      "Completed hands-on training in SQL, Python, data analysis, data cleaning, and data visualization. Developed practical skills through real-world datasets and analytics projects.",
-    skills: [
-      "SQL",
-      "Python",
-      "Data Analysis",
-      "Data Cleaning",
-      "Data Visualization",
-      "Pandas",
-      "Power BI",
-    ],
+      "Completed training in SQL, Python, data cleaning, exploratory data analysis, and data visualization.",
   },
   {
-    id: "job-ready-employability",
-    title: "Job Ready: Employability Skills at the Basic",
+    name: "Job Ready: Employability Skills at the Basic",
     issuer: "Wadhwani Foundation",
-    issueDate: "2025-12",
-    credential: "",
+    date: "December 2025",
     description:
-      "Completed training focused on workplace communication, teamwork, problem-solving, professionalism, and career readiness.",
-    skills: [
-      "Communication",
-      "Teamwork",
-      "Problem Solving",
-      "Professionalism",
-      "Career Readiness",
-    ],
+      "Completed employability skills training focused on communication, teamwork, and workplace readiness.",
   },
 ],
   projects: [

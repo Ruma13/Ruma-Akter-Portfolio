@@ -567,7 +567,7 @@ export const PORTFOLIO_INFO: Portfolio = {
       "Retail Analytics",
     ],
 
-    image: "public/sales_executive_dashboard.png",
+    image: "/sales_executive_dashboard.png",
 
     links: [
       {
@@ -596,7 +596,7 @@ export const PORTFOLIO_INFO: Portfolio = {
       "Dashboard",
     ],
 
-    image: "public/Online_Banking_Dashboard (1).jpg",
+    image: "/Online_Banking_Dashboard (1).jpg",
 
     links: [
       {
@@ -625,7 +625,7 @@ export const PORTFOLIO_INFO: Portfolio = {
       "ETL",
     ],
 
-    image: "public/kacci-dashboard (1).jpg",
+    image: "/kacci-dashboard (1).jpg",
 
     links: [
       {
@@ -660,8 +660,8 @@ export const PORTFOLIO_INFO: Portfolio = {
         },
       ],
       isUnderDevelopment: true,
-    },
-  ], */
+    },*/
+  ], 
   education: [
     {
       degree: "B.Sc. in Computer Science Engineering",

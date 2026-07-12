@@ -4,7 +4,7 @@ export const PORTFOLIO_INFO: Portfolio = {
   meta: {
     createdAt: new Date().toISOString(),
     locale: "en-US",
-    url: "https://RumaAkter.github.io", // update if you have a custom domain
+    url: "https://ruma13.github.io/Ruma-Akter-Portfolio/", // update if you have a custom domain
     pdf: "/Ruma_Akter_Resume.pdf",
   },
   personal: {
@@ -18,23 +18,22 @@ export const PORTFOLIO_INFO: Portfolio = {
       { url: "./portfolio_img.jfif", label: "" },
     ],
     summary:
-      "Computer Science and Engineering graduate with internship experience in Software Testing and Game Development. Passionate about Data Analytics, with hands-on skills in SQL, Python, Power BI, Excel, and MySQL. Currently focused on building a career by transforming data into meaningful business insights.
-",
+       "Computer Science and Engineering graduate with internship experience in Software Testing and Game Development. Passionate about Data Analytics, with hands-on skills in SQL, Python, Power BI, Excel, and MySQL. Currently focused on building a career by transforming data into meaningful business insights.",
     // optional hero summary used in the site hero; keeps a concise, senior-level intro tuned to your data
     hero: {
       summary:
-        "Turning data into actionable insights through SQL, Python, Power BI, and Excel. I build interactive dashboards, analyze datasets, and create data-driven solutions that support informed business decisions.
+        "Turning data into actionable insights through SQL, Python, Power BI, and Excel. I build interactive dashboards, analyze datasets, and create data-driven solutions that support informed business decisions."
 ",
     },
     contact: {
       email: "rumapiasi13@gmail.com",
       phone: "+880 1400331663",
       location: "Mirpur 11, Dhaka",
-      website: "https://RumaAkter.github.io",
+      website: "https://ruma13.github.io/Ruma-Akter-Portfolio/",
       socials: [
         {
           label: "LinkedIn",
-          url: "https:https://www.linkedin.com/in/ruma-akter-326799396/",
+          url: "https://www.linkedin.com/in/ruma-akter-326799396/",
           icon: "SiLinkedin",
         },
         {
@@ -305,58 +304,7 @@ export const PORTFOLIO_INFO: Portfolio = {
        
       ],
     },
-    {
-      title: "Infrastructure & DevOps",
-      skills: [
-        {
-          name: "Terraform",
-          level: 80,
-          icon: "SiTerraform",
-          category: "devops",
-          years: 3,
-          note: "Used in production since 2021",
-        },
-        {
-          name: "Bicep",
-          level: 70,
-          category: "devops",
-          years: 2,
-          note: "Used in production since 2022",
-        },
-        {
-          name: "AWS",
-          level: 78,
-          icon: "SiAmazonaws",
-          category: "devops",
-          years: 3,
-          note: "Used in production since 2021",
-        },
-        {
-          name: "Azure",
-          level: 78,
-          icon: "SiMicrosoftazure",
-          category: "devops",
-          years: 3,
-          note: "Used in production since 2021",
-        },
-        {
-          name: "Docker",
-          level: 75,
-          icon: "SiDocker",
-          category: "devops",
-          years: 3,
-          note: "Used in production since 2021",
-        },
-        {
-          name: "GitHub Actions",
-          level: 75,
-          icon: "SiGithubactions",
-          category: "devops",
-          years: 2,
-          note: "Used in production since 2022",
-        },
-      ],
-    },
+    
     {
       title: "Databases",
       skills: [
@@ -620,7 +568,7 @@ export const PORTFOLIO_INFO: Portfolio = {
       "Retail Analytics",
     ],
 
-    image: "./retail-sales-dashboard.png",
+    image: "public/sales_executive_dashboard.png",
 
     links: [
       {
@@ -649,7 +597,7 @@ export const PORTFOLIO_INFO: Portfolio = {
       "Dashboard",
     ],
 
-    image: "/public/online-banking-dashboard.png",
+    image: "public/Online_Banking_Dashboard (1).jpg",
 
     links: [
       {
@@ -678,7 +626,7 @@ export const PORTFOLIO_INFO: Portfolio = {
       "ETL",
     ],
 
-    image: "/public/restaurant-dashboard.png",
+    image: "public/kacci-dashboard (1).jpg",
 
     links: [
       {

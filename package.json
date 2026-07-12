@@ -3,7 +3,7 @@
   "private": false,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://satya00089.github.io/portfolio",
+  "homepage":  "https://ruma13.github.io/Ruma-Akter-Portfolio/",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",

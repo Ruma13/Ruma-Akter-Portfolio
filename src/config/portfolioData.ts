@@ -146,7 +146,7 @@ export const PORTFOLIO_INFO: Portfolio = {
         name: "Dashboard Development",
         level: 88,
         icon: "SiPowerbi",
-        category: "ddata",
+        category: "data",
       },
     ],
   },

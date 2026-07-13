@@ -2,6 +2,8 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 
+// force rebuild to clear vite config cache memory
+
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss()],

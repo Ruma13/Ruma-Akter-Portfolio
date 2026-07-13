@@ -2,7 +2,7 @@
 
 A modern, responsive portfolio website built with React, TypeScript, and Tailwind CSS. Features an interactive project showcase, skills visualization, CLI-style resume, and smooth animations.
 
-🔗 **Live Demo**: [https://satya00089.github.io/portfolio](https://satya00089.github.io/portfolio)
+🔗 **Live Demo**: (https://ruma13.github.io/Ruma-Akter-Portfolio/)
 
 > Free, modern developer portfolio template with:
 >
@@ -43,7 +43,7 @@ This repository is intended to be a ready-to-customize portfolio template. There
 ### Option B — Clone directly
 
 ```bash
-git clone https://github.com/satya00089/portfolio.git my-portfolio
+git clone (https://ruma13.github.io/Ruma-Akter-Portfolio.git my-portfolio
 cd my-portfolio
 npm install
 npm run dev
@@ -60,12 +60,6 @@ Quick start (do these first)
 Why `src/config/portfolioData.ts`?
 
 All site content (projects, skills, education, experience, and basic profile info) is driven by `src/config/portfolioData.ts`. Editing that file is the fastest way to make this site yours.
-
-## ☁️ One-click Deploy
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/satya00089/portfolio)
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/satya00089/portfolio)
 
 ## 🛠️ Tech Stack
 
@@ -183,14 +177,14 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## 👤 Author
 
-**Satya Subudhi**
+**Ruma Akter**
 
-- GitHub: [@satya00089](https://github.com/satya00089)
-- Email: satyasubudhi089@gmail.com
+- GitHub:(https://github.com/Ruma13)
+- Email: rumapiasi13@gmail.com
 
 ## 🤝 Contributing
 
-Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/satya00089/portfolio/issues).
+Contributions, issues, and feature requests are welcome! 
 
 ---
 

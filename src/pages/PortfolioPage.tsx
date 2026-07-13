@@ -88,7 +88,7 @@ const PortfolioPage: React.FC = () => {
           <SkillsList skills={PORTFOLIO_INFO.skills} isBar={true} />
         </section>
 
-        {/*  Experience Section */}
+  {/*  Experience Section (Light & Dark Mode Compatible) */}
         {PORTFOLIO_INFO.experience && PORTFOLIO_INFO.experience.length > 0 && (
           <section id="experience" className="py-8">
             <h2 className="text-2xl font-semibold text-[var(--brand)]">Experience</h2>
@@ -98,21 +98,21 @@ const PortfolioPage: React.FC = () => {
             <div className="space-y-6 border-l-2 border-[var(--border)] pl-4 ml-2">
               {PORTFOLIO_INFO.experience.map((exp: any, index: number) => (
                 <div key={exp.id || index} className="relative group">
-                  <div className="absolute -left-[22px] top-1.5 bg-[var(--brand)] h-3 w-3 rounded-full border-4 border-black group-hover:scale-125 transition-transform" />
+                  <div className="absolute -left-[22px] top-1.5 bg-[var(--brand)] h-3 w-3 rounded-full border-4 border-white dark:border-black group-hover:scale-125 transition-transform" />
                   <div className="p-6 rounded-2xl bg-[var(--surface)] border border-[var(--border)] hover:border-[var(--brand)] transition-all">
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
-                      <h3 className="text-xl font-bold text-white">{exp.title}</h3>
-                      <span className="text-xs text-gray-400 font-medium bg-[var(--border)] px-2 py-1 rounded-md w-fit">
+                      <h3 className="text-xl font-bold text-slate-900 dark:text-white">{exp.title}</h3>
+                      <span className="text-xs text-slate-600 dark:text-gray-400 font-medium bg-slate-100 dark:bg-black/30 px-2 py-1 rounded-md w-fit border border-[var(--border)]">
                         {exp.date.start} — {exp.date.end || "Present"}
                       </span>
                     </div>
                     <h4 className="text-sm font-medium text-[var(--brand)] mt-1">
-                      {exp.company} • <span className="text-gray-400 font-normal">{exp.location}</span>
+                      {exp.company} • <span className="text-slate-500 dark:text-gray-400 font-normal">{exp.location}</span>
                     </h4>
-                    <p className="text-sm text-gray-300 mt-3 italic">{exp.summary}</p>
+                    <p className="text-sm text-slate-700 dark:text-gray-300 mt-3 italic">{exp.summary}</p>
                     
                     {exp.bullets && exp.bullets.length > 0 && (
-                      <ul className="mt-3 space-y-1.5 list-disc list-inside text-sm text-gray-400">
+                      <ul className="mt-3 space-y-1.5 list-disc list-inside text-sm text-slate-600 dark:text-gray-400">
                         {exp.bullets.map((bullet: string, i: number) => (
                           <li key={i}>{bullet}</li>
                         ))}
@@ -122,7 +122,7 @@ const PortfolioPage: React.FC = () => {
                     {exp.tech && (
                       <div className="mt-4 flex flex-wrap gap-1.5">
                         {exp.tech.map((t: string, i: number) => (
-                          <span key={i} className="text-xs bg-black/40 text-[var(--brand)] px-2.5 py-1 rounded-full border border-[var(--border)]">
+                          <span key={i} className="text-xs bg-slate-100 dark:bg-black/40 text-[var(--brand)] px-2.5 py-1 rounded-full border border-[var(--border)] font-medium">
                             {t}
                           </span>
                         ))}
@@ -135,7 +135,7 @@ const PortfolioPage: React.FC = () => {
           </section>
         )}
 
-{/*   Education Section (Modern Clean Grid Card) */}
+        {/*  Education Section (Fixed Text Contrast for Light Mode) */}
         {PORTFOLIO_INFO.education && PORTFOLIO_INFO.education.length > 0 && (
           <section id="education" className="py-12">
             <h2 className="text-2xl font-semibold text-[var(--brand)] flex items-center gap-2">
@@ -147,7 +147,6 @@ const PortfolioPage: React.FC = () => {
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {PORTFOLIO_INFO.education.map((edu: any, index: number) => {
-               
                 const isBSc = edu.degree.includes("B.Sc.");
                 
                 return (
@@ -155,38 +154,32 @@ const PortfolioPage: React.FC = () => {
                     key={index} 
                     className={`p-6 rounded-2xl border transition-all duration-300 flex flex-col justify-between relative overflow-hidden group ${
                       isBSc 
-                        ? "bg-gradient-to-br from-[var(--surface)] to-[var(--brand)]/10 border-[var(--brand)] shadow-[0_4px_20px_rgba(var(--brand-rgb),0.15)] md:col-span-1" 
-                        : "bg-[var(--surface)] border-[var(--border)] hover:border-gray-500"
+                        ? "bg-gradient-to-br from-[var(--surface)] to-[var(--brand)]/10 border-[var(--brand)] shadow-[0_4px_20px_rgba(var(--brand-rgb),0.15)]" 
+                        : "bg-[var(--surface)] border-[var(--border)] hover:border-[var(--brand)]"
                     }`}
                   >
-                    {/* কার্ডের ভেতরের ব্যাকগ্রাউন্ড গ্লো */}
-                    <div className="absolute -top-10 -right-10 h-24 w-24 bg-[var(--brand)] opacity-[0.03] rounded-full group-hover:scale-150 transition-transform duration-500" />
-                    
                     <div>
-                      
                       <div className="flex items-center justify-between">
                         <span className={`text-[10px] font-mono px-2.5 py-0.5 rounded-md font-semibold tracking-wider uppercase ${
                           isBSc 
                             ? "bg-[var(--brand)] text-black" 
-                            : "bg-black/40 text-gray-400 border border-[var(--border)]"
+                            : "bg-slate-200 dark:bg-black/40 text-slate-600 dark:text-gray-400 border border-[var(--border)]"
                         }`}>
                           {isBSc ? "Current" : "Graduated"}
                         </span>
-                        <span className="text-xs font-medium text-gray-400">
+                        <span className="text-xs font-medium text-slate-500 dark:text-gray-400">
                           {edu.date}
                         </span>
                       </div>
 
-                      {/* ডিগ্রি ও শিক্ষা প্রতিষ্ঠান */}
-                      <h3 className="text-lg font-bold text-white mt-4 leading-snug group-hover:text-[var(--brand)] transition-colors">
+                      <h3 className="text-lg font-bold text-slate-900 dark:text-white mt-4 leading-snug group-hover:text-[var(--brand)] transition-colors">
                         {edu.degree}
                       </h3>
-                      <p className="text-sm text-gray-400 mt-2 flex items-center gap-1.5">
+                      <p className="text-sm text-slate-600 dark:text-gray-400 mt-2 flex items-center gap-1.5">
                         <span className="text-xs">📍</span> {edu.school}
                       </p>
                     </div>
 
-                    
                     {isBSc && (
                       <div className="mt-6 pt-4 border-t border-[var(--border)] text-xs text-[var(--brand)] font-medium flex items-center gap-1.5">
                         <span className="h-1.5 w-1.5 bg-[var(--brand)] rounded-full animate-ping" />
@@ -200,28 +193,69 @@ const PortfolioPage: React.FC = () => {
           </section>
         )}
 
-        {/* Certifications Section */}
+        {/*  Certifications Section (Data Analyst Highlight & Eye-Catching UI) */}
         {PORTFOLIO_INFO.certifications && PORTFOLIO_INFO.certifications.length > 0 && (
-          <section id="certificates" className="py-8">
-            <h2 className="text-2xl font-semibold text-[var(--brand)]">Certifications</h2>
-            <p className="mb-6 text-sm text-gray-500 dark:text-gray-400 mt-1">
+          <section id="certificates" className="py-12">
+            <h2 className="text-2xl font-semibold text-[var(--brand)] flex items-center gap-2">
+              <span>📜</span> Certifications
+            </h2>
+            <p className="mb-8 text-sm text-gray-500 dark:text-gray-400 mt-1">
               Professional credentials and training programs completed.
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {PORTFOLIO_INFO.certifications.map((cert: any, index: number) => (
-                <div key={index} className="p-5 rounded-2xl bg-[var(--surface)] border border-[var(--border)] flex flex-col justify-between hover:border-[var(--brand)] transition-all">
-                  <div>
-                    <div className="flex items-start justify-between gap-2">
-                      <h3 className="text-md font-bold text-white">{cert.name}</h3>
-                      <span className="text-[10px] text-gray-400 whitespace-nowrap bg-black/30 px-2 py-0.5 rounded-md">
-                        {cert.date}
-                      </span>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {PORTFOLIO_INFO.certifications.map((cert: any, index: number) => {
+                
+                const isDataAnalyst = cert.name.toLowerCase().includes("data analyst");
+                
+                return (
+                  <div 
+                    key={index} 
+                    className={`p-6 rounded-2xl border transition-all duration-300 flex flex-col justify-between relative overflow-hidden group ${
+                      isDataAnalyst 
+                        ? "bg-gradient-to-br from-[var(--surface)] via-[var(--brand)]/[0.03] to-[var(--brand)]/[0.08] border-[var(--brand)] shadow-[0_8px_30px_rgba(var(--brand-rgb),0.2)] md:scale-[1.02] z-10" 
+                        : "bg-[var(--surface)] border-[var(--border)] hover:border-[var(--brand)]"
+                    }`}
+                  >
+                    
+                    {isDataAnalyst && (
+                      <div className="absolute -right-6 -top-6 w-24 h-24 bg-[var(--brand)] opacity-10 rounded-full blur-xl pointer-events-none group-hover:scale-150 transition-transform duration-500" />
+                    )}
+
+                    <div>
+                      <div className="flex items-start justify-between gap-4">
+                        <div>
+                          <h3 className="text-lg font-bold text-slate-900 dark:text-white group-hover:text-[var(--brand)] transition-colors leading-snug">
+                            {cert.name}
+                          </h3>
+                          <p className="text-sm font-semibold text-[var(--brand)] mt-1 flex items-center gap-1">
+                            🏅 {cert.issuer}
+                          </p>
+                        </div>
+                        
+                        <span className="text-[10px] font-mono text-slate-500 dark:text-gray-400 whitespace-nowrap bg-slate-100 dark:bg-black/30 px-2.5 py-1 rounded-md border border-[var(--border)]">
+                          {cert.date}
+                        </span>
+                      </div>
+                      
+                      <p className="text-sm text-slate-600 dark:text-gray-400 mt-4 leading-relaxed">
+                        {cert.description}
+                      </p>
                     </div>
-                    <p className="text-xs font-medium text-[var(--brand)] mt-1">{cert.issuer}</p>
-                    <p className="text-xs text-gray-400 mt-2 line-clamp-2">{cert.description}</p>
+
+                    
+                    {isDataAnalyst && (
+                      <div className="mt-6 pt-4 border-t border-[var(--brand)]/20 flex items-center justify-between text-xs">
+                        <span className="text-amber-500 dark:text-amber-400 font-bold flex items-center gap-1 animate-pulse">
+                          ✨ Featured Specialization
+                        </span>
+                        <span className="text-slate-400 dark:text-gray-500 text-[11px] italic">
+                          SQL + Python Expert
+                        </span>
+                      </div>
+                    )}
                   </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </section>
         )}

@@ -69,12 +69,12 @@ export type Skill = {
     | "programming "
     | "analytics"
     | "library"
-    | "data"
     | "frontend"
     | "backend"
+    | "data"
     | "database"
-    | "tools"
-    | "testing";
+    | "testing"
+    | "tools";
   note?: string; // optional note e.g. "used at work since 2020"
 };
 

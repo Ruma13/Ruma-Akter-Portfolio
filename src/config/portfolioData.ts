@@ -257,7 +257,7 @@ export const PORTFOLIO_INFO: Portfolio = {
   ],
   education: [
     {
-      degree: "B.Sc. in Computer Science Engineering",
+      degree: "B.Sc. in Computer Science & Engineering",
       school: "Green University Of Bangladesh",
       date: "2022-2026",
     },

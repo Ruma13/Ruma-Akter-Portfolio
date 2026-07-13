@@ -91,11 +91,11 @@ const PortfolioPage: React.FC = () => {
           <SkillsList skills={PORTFOLIO_INFO.skills} isBar={true} />
         </section>
 
-{/*  EXPERIENCE SECTION (Fixed Text Contrast for Both Modes) */}
+{/* EXPERIENCE SECTION (With Purple Hover Effect on Tech Badges) */}
         {PORTFOLIO_INFO.experience && PORTFOLIO_INFO.experience.length > 0 && (
           <section id="experience" className="py-12">
             <h2 className="text-2xl font-semibold text-[var(--brand)] tracking-wide uppercase">Experience</h2>
-            <p className="mb-8 text-sm text-slate-500 dark:text-slate-400 mt-1">
+            <p className="mb-8 text-sm text-slate-600 dark:text-gray-300 mt-1">
               Professional journey and industry experience.
             </p>
             <div className="space-y-6 border-l-2 border-[var(--border)] pl-4 ml-2">
@@ -104,18 +104,18 @@ const PortfolioPage: React.FC = () => {
                   <div className="absolute -left-[22px] top-1.5 bg-[var(--brand)] h-3 w-3 rounded-full border-4 border-white dark:border-slate-950 group-hover:scale-125 transition-transform" />
                   <div className="p-6 rounded-2xl bg-[var(--surface)] border border-[var(--border)] hover:border-[var(--brand)] transition-all">
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
-                      <h3 className="text-xl font-bold text-slate-900 dark:text-slate-100">{exp.title}</h3>
-                      <span className="text-xs text-slate-700 dark:text-slate-300 font-medium bg-slate-100 dark:bg-slate-900 px-2.5 py-1 rounded-md w-fit border border-[var(--border)]">
+                      <h3 className="text-xl font-bold text-slate-900 dark:text-white">{exp.title}</h3>
+                      <span className="text-xs text-slate-800 dark:text-gray-100 font-semibold bg-slate-200 dark:bg-slate-800 px-2.5 py-1 rounded-md w-fit border border-[var(--border)]">
                         {exp.date.start} — {exp.date.end || "Present"}
                       </span>
                     </div>
-                    <h4 className="text-sm font-medium text-[var(--brand)] mt-1">
-                      {exp.company} • <span className="text-slate-500 dark:text-slate-400 font-normal">{exp.location}</span>
+                    <h4 className="text-sm font-semibold text-[var(--brand)] mt-1">
+                      {exp.company} • <span className="text-slate-600 dark:text-gray-300 font-normal">{exp.location}</span>
                     </h4>
-                    <p className="text-sm text-slate-800 dark:text-slate-200 mt-3 italic">{exp.summary}</p>
+                    <p className="text-sm text-slate-800 dark:text-gray-200 mt-3 italic">{exp.summary}</p>
                     
                     {exp.bullets && exp.bullets.length > 0 && (
-                      <ul className="mt-3 space-y-1.5 list-disc list-inside text-sm text-slate-700 dark:text-slate-300">
+                      <ul className="mt-3 space-y-1.5 list-disc list-inside text-sm text-slate-800 dark:text-gray-200">
                         {exp.bullets.map((bullet: string, i: number) => (
                           <li key={i}>{bullet}</li>
                         ))}
@@ -125,7 +125,10 @@ const PortfolioPage: React.FC = () => {
                     {exp.tech && (
                       <div className="mt-4 flex flex-wrap gap-1.5">
                         {exp.tech.map((t: string, i: number) => (
-                          <span key={i} className="text-xs bg-slate-100 dark:bg-slate-900 text-[var(--brand)] px-2.5 py-1 rounded-full border border-[var(--border)] font-medium">
+                          <span 
+                            key={i} 
+                            className="text-xs bg-slate-200 dark:bg-slate-800 text-slate-900 dark:text-gray-100 px-2.5 py-1 rounded-full border border-[var(--border)] font-semibold transition-all duration-300 transform hover:-translate-y-0.5 hover:bg-purple-700 hover:text-white dark:hover:bg-purple-600 dark:hover:text-white hover:border-purple-700 dark:hover:border-purple-600 cursor-default"
+                          >
                             {t}
                           </span>
                         ))}
@@ -138,11 +141,11 @@ const PortfolioPage: React.FC = () => {
           </section>
         )}
 
-        {/* CERTIFICATIONS SECTION (Sleek Horizontal Layout & Data Analyst Highlight) */}
+  {/* CERTIFICATIONS SECTION (High Contrast Cyan/Mint Highlight) */}
         {PORTFOLIO_INFO.certifications && PORTFOLIO_INFO.certifications.length > 0 && (
           <section id="certificates" className="py-12">
             <h2 className="text-2xl font-semibold text-[var(--brand)] tracking-wide uppercase">Certifications</h2>
-            <p className="mb-8 text-sm text-slate-500 dark:text-slate-400 mt-1">
+            <p className="mb-8 text-sm text-slate-600 dark:text-gray-300 mt-1">
               Professional credentials and specialized training programs.
             </p>
             <div className="space-y-4">
@@ -154,29 +157,29 @@ const PortfolioPage: React.FC = () => {
                     key={index} 
                     className={`p-6 rounded-2xl border transition-all duration-300 flex flex-col md:flex-row md:items-center justify-between gap-4 relative overflow-hidden group ${
                       isDataAnalyst 
-                        ? "bg-gradient-to-r from-[var(--surface)] to-[var(--brand)]/[0.05] border-[var(--brand)] shadow-[0_4px_20px_rgba(var(--brand-rgb),0.1)]" 
+                        ? "bg-gradient-to-r from-[var(--surface)] to-emerald-500/[0.03] border-emerald-500 dark:border-emerald-500/50 shadow-md" 
                         : "bg-[var(--surface)] border-[var(--border)] hover:border-[var(--brand)]"
                     }`}
                   >
                     <div className="flex-1">
                       <div className="flex flex-wrap items-center gap-2">
-                        <h3 className="text-lg font-bold text-slate-900 dark:text-slate-100 group-hover:text-[var(--brand)] transition-colors">
+                        <h3 className="text-lg font-bold text-slate-900 dark:text-white group-hover:text-[var(--brand)] transition-colors">
                           {cert.name}
                         </h3>
                         {isDataAnalyst && (
-                          <span className="text-[10px] bg-[var(--brand)]/10 text-[var(--brand)] px-2 py-0.5 rounded border border-[var(--brand)]/20 font-semibold tracking-wider uppercase">
-                            Featured
+                          <span className="text-[10px] bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 px-2.5 py-0.5 rounded border border-emerald-500/30 font-bold tracking-wider uppercase">
+                            Specialization
                           </span>
                         )}
                       </div>
-                      <p className="text-sm font-medium text-[var(--brand)] mt-0.5">{cert.issuer}</p>
-                      <p className="text-sm text-slate-700 dark:text-slate-300 mt-2 max-w-3xl">
+                      <p className="text-sm font-semibold text-[var(--brand)] mt-0.5">{cert.issuer}</p>
+                      <p className="text-sm text-slate-800 dark:text-gray-200 mt-2 max-w-3xl leading-relaxed">
                         {cert.description}
                       </p>
                     </div>
 
                     <div className="text-left md:text-right shrink-0 border-t md:border-t-0 pt-3 md:pt-0 border-[var(--border)]">
-                      <span className="text-xs font-mono text-slate-700 dark:text-slate-300 bg-slate-100 dark:bg-slate-900 px-2.5 py-1 rounded-md border border-[var(--border)]">
+                      <span className="text-xs font-mono text-slate-800 dark:text-white bg-slate-200 dark:bg-slate-800 px-2.5 py-1 rounded-md border border-[var(--border)] font-medium">
                         {cert.date}
                       </span>
                     </div>
@@ -187,43 +190,66 @@ const PortfolioPage: React.FC = () => {
           </section>
         )}
 
-        {/*  EDUCATION SECTION (Sleek Minimalist Single-Card Layout) */}
+        {/*  EDUCATION SECTION (Premium Interactive Sleek Design) */}
         {PORTFOLIO_INFO.education && PORTFOLIO_INFO.education.length > 0 && (
           <section id="education" className="py-12">
             <h2 className="text-2xl font-semibold text-[var(--brand)] tracking-wide uppercase">Education</h2>
-            <p className="mb-6 text-sm text-slate-500 dark:text-slate-400 mt-1">
+            <p className="mb-6 text-sm text-slate-600 dark:text-gray-300 mt-1">
               Academic qualification and educational background.
             </p>
             
-            <div className="max-w-3xl">
+            <div className="max-w-4xl">
               {PORTFOLIO_INFO.education
                 .filter((edu: any) => edu.degree.includes("B.Sc."))
                 .map((edu: any, index: number) => (
                   <div 
                     key={index} 
-                    className="p-6 rounded-r-2xl bg-[var(--surface)] border border-l-4 border-[var(--border)] border-l-[var(--brand)] hover:shadow-sm transition-all duration-300"
+                    className="p-8 rounded-2xl bg-gradient-to-br from-[var(--surface)] via-[var(--surface)] to-[var(--brand)]/[0.03] border-2 border-[var(--border)] hover:border-[var(--brand)] shadow-lg transition-all duration-300 relative overflow-hidden group"
                   >
-                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-                      <h3 className="text-xl font-bold text-slate-900 dark:text-slate-100">
-                        {edu.degree}
-                      </h3>
-                      <span className="text-xs font-mono text-slate-700 dark:text-slate-300 bg-slate-100 dark:bg-slate-900 border border-[var(--border)] px-2.5 py-1 rounded-md w-fit">
-                        {edu.date}
-                      </span>
+                    {/* রাইট গ্লো ডেকোরেশন */}
+                    <div className="absolute right-0 bottom-0 h-32 w-32 bg-[var(--brand)] opacity-[0.02] rounded-tl-full pointer-events-none group-hover:opacity-[0.05] transition-opacity duration-500" />
+                    
+                    <div className="flex flex-col md:flex-row md:items-start justify-between gap-4">
+                      <div>
+                        <span className="text-[10px] font-mono tracking-widest text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 px-2.5 py-1 rounded-md border border-emerald-500/20 font-bold uppercase">
+                          Degree Earned
+                        </span>
+                        
+                        <h3 className="text-2xl font-extrabold text-slate-900 dark:text-white mt-3 leading-tight tracking-tight">
+                          {edu.degree}
+                        </h3>
+                        
+                        <p className="text-base font-semibold text-[var(--brand)] mt-1.5">
+                          {edu.school}
+                        </p>
+                      </div>
+
+                      <div className="shrink-0">
+                        <span className="text-xs font-mono font-bold text-slate-900 dark:text-white bg-slate-200 dark:bg-slate-800 px-3 py-1.5 rounded-md border border-[var(--border)] shadow-sm">
+                          {edu.date}
+                        </span>
+                      </div>
                     </div>
 
-                    <p className="text-base font-medium text-[var(--brand)] mt-2">
-                      {edu.school}
-                    </p>
-
-                    <div className="mt-4 flex flex-wrap gap-4 text-xs text-slate-600 dark:text-slate-400 border-t border-[var(--border)]/60 pt-4">
-                      <div className="flex items-center gap-1">
-                        <span className="text-[var(--brand)]">▪</span> Computer Science & Engineering Department
+                    {/* প্রিমিয়াম বটম ইনফো ড্যাশবোর্ড বার */}
+                    <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-3 pt-6 border-t border-[var(--border)]">
+                      <div className="flex items-center gap-3 p-3 rounded-xl bg-slate-100/50 dark:bg-black/20 border border-[var(--border)]/40">
+                        <span className="text-lg text-[var(--brand)]">⚡</span>
+                        <div>
+                          <p className="text-[11px] text-slate-600 dark:text-gray-400 font-medium uppercase tracking-wider">Department</p>
+                          <p className="text-sm font-bold text-slate-900 dark:text-gray-100">Computer Science & Engineering</p>
+                        </div>
                       </div>
-                      <div className="flex items-center gap-1">
-                        <span className="text-emerald-500">▪</span> Degree Completed
+
+                      <div className="flex items-center gap-3 p-3 rounded-xl bg-slate-100/50 dark:bg-black/20 border border-[var(--border)]/40">
+                        <span className="text-lg text-emerald-500">✓</span>
+                        <div>
+                          <p className="text-[11px] text-slate-600 dark:text-gray-400 font-medium uppercase tracking-wider">Status</p>
+                          <p className="text-sm font-bold text-slate-900 dark:text-gray-100">Graduate Program Accomplished</p>
+                        </div>
                       </div>
                     </div>
+
                   </div>
                 ))}
             </div>

@@ -91,35 +91,33 @@ const PortfolioPage: React.FC = () => {
           <SkillsList skills={PORTFOLIO_INFO.skills} isBar={true} />
         </section>
 
-{/* ====== EXPERIENCE SECTION ====== */}
+{/* EXPERIENCE SECTION */}
         {PORTFOLIO_INFO.experience && PORTFOLIO_INFO.experience.length > 0 && (
-          <section id="experience" className="py-12">
-            <h2 className="text-2xl font-bold tracking-wide uppercase pb-1" style={{ color: 'var(--foreground)' }}>
+          <section id="experience" className="py-12 block">
+            <h2 className="text-2xl font-bold tracking-wide uppercase block pb-1" style={{ color: 'var(--foreground)' }}>
               Experience
             </h2>
-            <p className="mb-8 text-sm mt-1" style={{ color: 'var(--muted-foreground)' }}>
+            <p className="mb-8 text-sm mt-1 block opacity-90" style={{ color: 'var(--muted-foreground)' }}>
               Professional journey and industry experience.
             </p>
-            <div className="space-y-6 border-l-2 border-[var(--border)] pl-4 ml-2">
+            <div className="space-y-6 border-l-2 border-[var(--border)] pl-4 ml-2 block">
               {PORTFOLIO_INFO.experience.map((exp: any, index: number) => (
-                <div key={exp.id || index} className="relative group">
+                <div key={exp.id || index} className="relative block group">
                   <div className="absolute -left-[22px] top-1.5 bg-[var(--brand)] h-3 w-3 rounded-full border-4 border-[var(--background)] group-hover:scale-125 transition-transform" />
-                  <div className="p-6 rounded-2xl border transition-all" style={{ backgroundColor: 'var(--surface)', borderColor: 'var(--border)' }}>
+                  <div className="p-6 rounded-2xl border transition-all duration-300 hover:border-[var(--brand)]" style={{ backgroundColor: 'var(--surface)', borderColor: 'var(--border)' }}>
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
                       <h3 className="text-xl font-bold" style={{ color: 'var(--foreground)' }}>{exp.title}</h3>
                       <span className="text-xs font-semibold px-2.5 py-1 rounded-md" style={{ color: 'var(--foreground)', backgroundColor: 'var(--border)' }}>
                         {exp.date.start} — {exp.date.end || "Present"}
                       </span>
                     </div>
-                    <h4 className="text-sm font-semibold text-[var(--brand)] mt-1">
-                      {exp.company} • <span style={{ color: 'var(--muted-foreground)' }}>{exp.location}</span>
-                    </h4>
+                    <h4 className="text-sm font-semibold text-[var(--brand)] mt-1">{exp.company} • <span style={{ color: 'var(--muted-foreground)' }}>{exp.location}</span></h4>
                     <p className="text-sm mt-3 italic leading-relaxed" style={{ color: 'var(--muted-foreground)' }}>{exp.summary}</p>
                     
                     {exp.tech && (
                       <div className="mt-4 flex flex-wrap gap-1.5">
                         {exp.tech.map((t: string, i: number) => (
-                          <span key={i} className="text-xs px-2.5 py-1 rounded-full border font-semibold transition-all hover:bg-purple-700 hover:text-white" 
+                          <span key={i} className="text-xs px-2.5 py-1 rounded-full border font-semibold transition-all duration-300 transform hover:-translate-y-0.5 hover:bg-purple-700 hover:text-white hover:border-purple-700 cursor-default" 
                                 style={{ color: 'var(--foreground)', borderColor: 'var(--border)', backgroundColor: 'var(--border)' }}>
                             {t}
                           </span>
@@ -133,41 +131,48 @@ const PortfolioPage: React.FC = () => {
           </section>
         )}
 
-        {/* ====== CERTIFICATIONS SECTION ====== */}
+        {/*  CERTIFICATIONS SECTION */}
         {PORTFOLIO_INFO.certifications && PORTFOLIO_INFO.certifications.length > 0 && (
-          <section id="certificates" className="py-12">
-            <h2 className="text-2xl font-bold tracking-wide uppercase pb-1" style={{ color: 'var(--foreground)' }}>
+          <section id="certificates" className="py-12 block">
+            <h2 className="text-2xl font-bold tracking-wide uppercase block pb-1" style={{ color: 'var(--foreground)' }}>
               Certifications
             </h2>
-            <p className="mb-8 text-sm mt-1" style={{ color: 'var(--muted-foreground)' }}>
+            <p className="mb-8 text-sm mt-1 block opacity-90" style={{ color: 'var(--muted-foreground)' }}>
               Professional credentials and specialized training programs.
             </p>
-            <div className="space-y-4">
-              {PORTFOLIO_INFO.certifications.map((cert: any, index: number) => (
-                <div key={index} className="p-6 rounded-2xl border transition-all" style={{ backgroundColor: 'var(--surface)', borderColor: 'var(--border)' }}>
-                  <h3 className="text-lg font-bold" style={{ color: 'var(--foreground)' }}>{cert.name}</h3>
-                  <p className="text-sm font-semibold text-[var(--brand)] mt-0.5">{cert.issuer}</p>
-                  <p className="text-sm mt-2 leading-relaxed" style={{ color: 'var(--muted-foreground)' }}>{cert.description}</p>
-                </div>
-              ))}
+            <div className="space-y-4 block">
+              {PORTFOLIO_INFO.certifications.map((cert: any, index: number) => {
+                const isDataAnalyst = cert.name.toLowerCase().includes("data analyst");
+                return (
+                  <div key={index} className={`p-6 rounded-2xl border transition-all duration-300 ${isDataAnalyst ? "border-emerald-500 shadow-md" : ""}`} style={{ backgroundColor: 'var(--surface)', borderColor: 'var(--border)' }}>
+                    <div className="flex flex-wrap items-center gap-2 mb-2">
+                        <h3 className="text-lg font-bold" style={{ color: 'var(--foreground)' }}>{cert.name}</h3>
+                        {isDataAnalyst && (
+                          <span className="text-[10px] bg-emerald-500/20 text-emerald-600 px-2.5 py-0.5 rounded border border-emerald-500/30 font-bold uppercase">Featured</span>
+                        )}
+                    </div>
+                    <p className="text-sm font-semibold text-[var(--brand)]">{cert.issuer}</p>
+                    <p className="text-sm mt-2 leading-relaxed" style={{ color: 'var(--muted-foreground)' }}>{cert.description}</p>
+                  </div>
+                );
+              })}
             </div>
           </section>
         )}
 
-        {/* ====== EDUCATION SECTION ====== */}
+        {/*  EDUCATION SECTION */}
         {PORTFOLIO_INFO.education && PORTFOLIO_INFO.education.length > 0 && (
-          <section id="education" className="py-12">
-            <h2 className="text-2xl font-bold tracking-wide uppercase pb-1" style={{ color: 'var(--foreground)' }}>
+          <section id="education" className="py-12 block">
+            <h2 className="text-2xl font-bold tracking-wide uppercase block pb-1" style={{ color: 'var(--foreground)' }}>
               Education
             </h2>
-            <div className="max-w-4xl">
-              {PORTFOLIO_INFO.education.map((edu: any, index: number) => (
-                <div key={index} className="p-8 rounded-2xl border-2 transition-all mt-4" style={{ backgroundColor: 'var(--surface)', borderColor: 'var(--border)' }}>
-                  <h3 className="text-2xl font-extrabold" style={{ color: 'var(--foreground)' }}>{edu.degree}</h3>
+            <div className="max-w-4xl block">
+              {PORTFOLIO_INFO.education.filter((edu: any) => edu.degree.includes("B.Sc.")).map((edu: any, index: number) => (
+                <div key={index} className="p-8 rounded-2xl border-2 transition-all duration-300 mt-4 hover:border-[var(--brand)]" style={{ backgroundColor: 'var(--surface)', borderColor: 'var(--border)' }}>
+                  <span className="text-[10px] font-mono tracking-widest text-purple-500 bg-purple-500/10 px-2.5 py-1 rounded-md border border-purple-500/20 font-bold uppercase">CGPA: 3.38</span>
+                  <h3 className="text-2xl font-extrabold mt-3" style={{ color: 'var(--foreground)' }}>{edu.degree}</h3>
                   <p className="text-base font-semibold text-[var(--brand)] mt-1.5">{edu.school}</p>
-                  <span className="text-xs font-mono font-bold mt-2 inline-block px-3 py-1 rounded" style={{ color: 'var(--foreground)', backgroundColor: 'var(--border)' }}>
-                    CGPA: 3.38 • {edu.date}
-                  </span>
+                  <p className="text-sm mt-4 italic" style={{ color: 'var(--muted-foreground)' }}>{edu.date}</p>
                 </div>
               ))}
             </div>

@@ -135,21 +135,67 @@ const PortfolioPage: React.FC = () => {
           </section>
         )}
 
-        {/*  Education Section */}
+{/*   Education Section (Modern Clean Grid Card) */}
         {PORTFOLIO_INFO.education && PORTFOLIO_INFO.education.length > 0 && (
-          <section id="education" className="py-8">
-            <h2 className="text-2xl font-semibold text-[var(--brand)]">Education</h2>
-            <p className="mb-6 text-sm text-gray-500 dark:text-gray-400 mt-1">
+          <section id="education" className="py-12">
+            <h2 className="text-2xl font-semibold text-[var(--brand)] flex items-center gap-2">
+              <span>🎓</span> Education
+            </h2>
+            <p className="mb-8 text-sm text-gray-500 dark:text-gray-400 mt-1">
               Academic qualifications and educational background.
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {PORTFOLIO_INFO.education.map((edu: any, index: number) => (
-                <div key={index} className="p-5 rounded-2xl bg-[var(--surface)] border border-[var(--border)] hover:border-[var(--brand)] transition-all">
-                  <span className="text-xs text-[var(--brand)] font-medium">{edu.date}</span>
-                  <h3 className="text-lg font-bold mt-1 text-white">{edu.degree}</h3>
-                  <h4 className="text-sm text-gray-400 mt-0.5">{edu.school}</h4>
-                </div>
-              ))}
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {PORTFOLIO_INFO.education.map((edu: any, index: number) => {
+               
+                const isBSc = edu.degree.includes("B.Sc.");
+                
+                return (
+                  <div 
+                    key={index} 
+                    className={`p-6 rounded-2xl border transition-all duration-300 flex flex-col justify-between relative overflow-hidden group ${
+                      isBSc 
+                        ? "bg-gradient-to-br from-[var(--surface)] to-[var(--brand)]/10 border-[var(--brand)] shadow-[0_4px_20px_rgba(var(--brand-rgb),0.15)] md:col-span-1" 
+                        : "bg-[var(--surface)] border-[var(--border)] hover:border-gray-500"
+                    }`}
+                  >
+                    {/* কার্ডের ভেতরের ব্যাকগ্রাউন্ড গ্লো */}
+                    <div className="absolute -top-10 -right-10 h-24 w-24 bg-[var(--brand)] opacity-[0.03] rounded-full group-hover:scale-150 transition-transform duration-500" />
+                    
+                    <div>
+                      
+                      <div className="flex items-center justify-between">
+                        <span className={`text-[10px] font-mono px-2.5 py-0.5 rounded-md font-semibold tracking-wider uppercase ${
+                          isBSc 
+                            ? "bg-[var(--brand)] text-black" 
+                            : "bg-black/40 text-gray-400 border border-[var(--border)]"
+                        }`}>
+                          {isBSc ? "Current" : "Graduated"}
+                        </span>
+                        <span className="text-xs font-medium text-gray-400">
+                          {edu.date}
+                        </span>
+                      </div>
+
+                      {/* ডিগ্রি ও শিক্ষা প্রতিষ্ঠান */}
+                      <h3 className="text-lg font-bold text-white mt-4 leading-snug group-hover:text-[var(--brand)] transition-colors">
+                        {edu.degree}
+                      </h3>
+                      <p className="text-sm text-gray-400 mt-2 flex items-center gap-1.5">
+                        <span className="text-xs">📍</span> {edu.school}
+                      </p>
+                    </div>
+
+                    
+                    {isBSc && (
+                      <div className="mt-6 pt-4 border-t border-[var(--border)] text-xs text-[var(--brand)] font-medium flex items-center gap-1.5">
+                        <span className="h-1.5 w-1.5 bg-[var(--brand)] rounded-full animate-ping" />
+                        Final Semester • Computer Science
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
             </div>
           </section>
         )}

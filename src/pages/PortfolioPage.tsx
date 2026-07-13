@@ -25,10 +25,13 @@ const PortfolioPage: React.FC = () => {
     <ThemeProvider>
       <ScrollProgressBar />
       <Header
-        links={[
+       links={[
           { href: "#about", label: "About" },
           { href: "#projects", label: "Projects" },
           { href: "#skills", label: "Skills" },
+          { href: "#experience", label: "Experience" },
+          { href: "#certificates", label: "Certifications" },
+          { href: "#education", label: "Education" },
           { href: "#contact", label: "Contact" },
         ]}
         onTryCLI={() => setShowCLI(true)}

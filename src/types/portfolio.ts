@@ -60,24 +60,30 @@ export type Personal = {
 /* ---------- Skills, tags ---------- */
 
 export type Skill = {
-  id?: string; // optional machine id
-  name: string; // "React"
-  icon?: string; // optional icon name (e.g., "SiReact")
-  level?: number; // 1-10 or %
-  years?: number; // years of experience
+  id?: string;
+  name: string;
+  icon?: string;
+  level?: number;
+  years?: number;
+  // Updated category list to explicitly allow all your lowercase categories
   category?:
     | "programming"
+    | "Programming" // In case other components depend on the capitalized version
     | "analytics"
     | "library"
+    | "Libraries"
     | "frontend"
     | "backend"
     | "data"
     | "database"
     | "testing"
-    | "tools";
-  note?: string; // optional note e.g. "used at work since 2020"
+    | "Software"
+    | "tools"
+    | "Tools"
+    | "AI"
+    | "analytics"; 
+  note?: string;
 };
-
 export type SkillGroup = {
   title?: string;
   skills: Skill[];

@@ -5,7 +5,7 @@ export const PORTFOLIO_INFO: Portfolio = {
     createdAt: new Date().toISOString(),
     locale: "en-US",
     url: "https://ruma13.github.io/Ruma-Akter-Portfolio/",
-    pdf: "/Ruma_Akter_Resume.pdf",
+    pdf: "./resume.pdf",
   },
   personal: {
     name: "Ruma Akter",

@@ -91,7 +91,7 @@ const PortfolioPage: React.FC = () => {
           <SkillsList skills={PORTFOLIO_INFO.skills} isBar={true} />
         </section>
 
-{/* EXPERIENCE SECTION */}
+{/* 💼 ১. EXPERIENCE SECTION */}
         {PORTFOLIO_INFO.experience && PORTFOLIO_INFO.experience.length > 0 && (
           <section id="experience" className="py-12 block">
             <h2 className="text-2xl font-bold tracking-wide uppercase block pb-1" style={{ color: 'var(--foreground)' }}>
@@ -104,7 +104,7 @@ const PortfolioPage: React.FC = () => {
               {PORTFOLIO_INFO.experience.map((exp: any, index: number) => (
                 <div key={exp.id || index} className="relative block group">
                   <div className="absolute -left-[22px] top-1.5 bg-[var(--brand)] h-3 w-3 rounded-full border-4 border-[var(--background)] group-hover:scale-125 transition-transform" />
-                  <div className="p-6 rounded-2xl border transition-all duration-300 hover:border-[var(--brand)]" style={{ backgroundColor: 'var(--surface)', borderColor: 'var(--border)' }}>
+                  <div className="p-6 rounded-2xl border transition-all duration-300 hover:border-[var(--brand)] hover:shadow-lg" style={{ backgroundColor: 'var(--surface)', borderColor: 'var(--border)' }}>
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
                       <h3 className="text-xl font-bold" style={{ color: 'var(--foreground)' }}>{exp.title}</h3>
                       <span className="text-xs font-semibold px-2.5 py-1 rounded-md" style={{ color: 'var(--foreground)', backgroundColor: 'var(--border)' }}>
@@ -117,7 +117,7 @@ const PortfolioPage: React.FC = () => {
                     {exp.tech && (
                       <div className="mt-4 flex flex-wrap gap-1.5">
                         {exp.tech.map((t: string, i: number) => (
-                          <span key={i} className="text-xs px-2.5 py-1 rounded-full border font-semibold transition-all duration-300 transform hover:-translate-y-0.5 hover:bg-purple-700 hover:text-white hover:border-purple-700 cursor-default" 
+                          <span key={i} className="text-xs px-2.5 py-1 rounded-full border font-semibold transition-all duration-300 transform hover:-translate-y-1 hover:bg-[var(--brand)] hover:text-white hover:border-[var(--brand)] cursor-default" 
                                 style={{ color: 'var(--foreground)', borderColor: 'var(--border)', backgroundColor: 'var(--border)' }}>
                             {t}
                           </span>
@@ -131,7 +131,7 @@ const PortfolioPage: React.FC = () => {
           </section>
         )}
 
-        {/*  CERTIFICATIONS SECTION */}
+        {/* 📜 ২. CERTIFICATIONS SECTION */}
         {PORTFOLIO_INFO.certifications && PORTFOLIO_INFO.certifications.length > 0 && (
           <section id="certificates" className="py-12 block">
             <h2 className="text-2xl font-bold tracking-wide uppercase block pb-1" style={{ color: 'var(--foreground)' }}>
@@ -144,7 +144,7 @@ const PortfolioPage: React.FC = () => {
               {PORTFOLIO_INFO.certifications.map((cert: any, index: number) => {
                 const isDataAnalyst = cert.name.toLowerCase().includes("data analyst");
                 return (
-                  <div key={index} className={`p-6 rounded-2xl border transition-all duration-300 ${isDataAnalyst ? "border-emerald-500 shadow-md" : ""}`} style={{ backgroundColor: 'var(--surface)', borderColor: 'var(--border)' }}>
+                  <div key={index} className={`p-6 rounded-2xl border transition-all duration-300 hover:border-[var(--brand)] ${isDataAnalyst ? "border-emerald-500 shadow-md" : ""}`} style={{ backgroundColor: 'var(--surface)', borderColor: 'var(--border)' }}>
                     <div className="flex flex-wrap items-center gap-2 mb-2">
                         <h3 className="text-lg font-bold" style={{ color: 'var(--foreground)' }}>{cert.name}</h3>
                         {isDataAnalyst && (
@@ -160,7 +160,7 @@ const PortfolioPage: React.FC = () => {
           </section>
         )}
 
-        {/*  EDUCATION SECTION */}
+        {/* 🎓 ③. EDUCATION SECTION */}
         {PORTFOLIO_INFO.education && PORTFOLIO_INFO.education.length > 0 && (
           <section id="education" className="py-12 block">
             <h2 className="text-2xl font-bold tracking-wide uppercase block pb-1" style={{ color: 'var(--foreground)' }}>
@@ -168,11 +168,14 @@ const PortfolioPage: React.FC = () => {
             </h2>
             <div className="max-w-4xl block">
               {PORTFOLIO_INFO.education.filter((edu: any) => edu.degree.includes("B.Sc.")).map((edu: any, index: number) => (
-                <div key={index} className="p-8 rounded-2xl border-2 transition-all duration-300 mt-4 hover:border-[var(--brand)]" style={{ backgroundColor: 'var(--surface)', borderColor: 'var(--border)' }}>
+                <div key={index} className="p-8 rounded-2xl border-2 transition-all duration-300 mt-4 hover:border-[var(--brand)] hover:shadow-lg" style={{ backgroundColor: 'var(--surface)', borderColor: 'var(--border)' }}>
                   <span className="text-[10px] font-mono tracking-widest text-purple-500 bg-purple-500/10 px-2.5 py-1 rounded-md border border-purple-500/20 font-bold uppercase">CGPA: 3.38</span>
-                  <h3 className="text-2xl font-extrabold mt-3" style={{ color: 'var(--foreground)' }}>{edu.degree}</h3>
+                  <h3 className="text-2xl font-extrabold mt-3" style={{ color: 'var(--foreground)' }}>{edu.degree} in Computer Science & Engineering</h3>
                   <p className="text-base font-semibold text-[var(--brand)] mt-1.5">{edu.school}</p>
-                  <p className="text-sm mt-4 italic" style={{ color: 'var(--muted-foreground)' }}>{edu.date}</p>
+                  <p className="text-sm mt-4 italic" style={{ color: 'var(--muted-foreground)' }}>
+                    Completed undergraduate program with a major in Computer Science & Engineering, building expertise across Software Quality Assurance, Data Analysis, and Frontend Technologies.
+                  </p>
+                  <p className="text-xs font-mono mt-2" style={{ color: 'var(--muted-foreground)' }}>{edu.date}</p>
                 </div>
               ))}
             </div>

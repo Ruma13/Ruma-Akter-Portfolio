@@ -91,7 +91,7 @@ const PortfolioPage: React.FC = () => {
           <SkillsList skills={PORTFOLIO_INFO.skills} isBar={true} />
         </section>
 
-{/* 💼 ১. EXPERIENCE SECTION */}
+{/*  EXPERIENCE SECTION */}
         {PORTFOLIO_INFO.experience && PORTFOLIO_INFO.experience.length > 0 && (
           <section id="experience" className="py-12 block">
             <h2 className="text-2xl font-bold tracking-wide uppercase block pb-1" style={{ color: 'var(--foreground)' }}>
@@ -131,7 +131,7 @@ const PortfolioPage: React.FC = () => {
           </section>
         )}
 
-        {/* 📜 ২. CERTIFICATIONS SECTION */}
+        {/*  CERTIFICATIONS SECTION */}
         {PORTFOLIO_INFO.certifications && PORTFOLIO_INFO.certifications.length > 0 && (
           <section id="certificates" className="py-12 block">
             <h2 className="text-2xl font-bold tracking-wide uppercase block pb-1" style={{ color: 'var(--foreground)' }}>
@@ -160,7 +160,7 @@ const PortfolioPage: React.FC = () => {
           </section>
         )}
 
-        {/* 🎓 ③. EDUCATION SECTION */}
+        {/*  EDUCATION SECTION */}
         {PORTFOLIO_INFO.education && PORTFOLIO_INFO.education.length > 0 && (
           <section id="education" className="py-12 block">
             <h2 className="text-2xl font-bold tracking-wide uppercase block pb-1" style={{ color: 'var(--foreground)' }}>
@@ -170,7 +170,7 @@ const PortfolioPage: React.FC = () => {
               {PORTFOLIO_INFO.education.filter((edu: any) => edu.degree.includes("B.Sc.")).map((edu: any, index: number) => (
                 <div key={index} className="p-8 rounded-2xl border-2 transition-all duration-300 mt-4 hover:border-[var(--brand)] hover:shadow-lg" style={{ backgroundColor: 'var(--surface)', borderColor: 'var(--border)' }}>
                   <span className="text-[10px] font-mono tracking-widest text-purple-500 bg-purple-500/10 px-2.5 py-1 rounded-md border border-purple-500/20 font-bold uppercase">CGPA: 3.38</span>
-                  <h3 className="text-2xl font-extrabold mt-3" style={{ color: 'var(--foreground)' }}>{edu.degree} in Computer Science & Engineering</h3>
+                  <h3 className="text-2xl font-extrabold mt-3" style={{ color: 'var(--foreground)' }}>{edu.degree} </h3>
                   <p className="text-base font-semibold text-[var(--brand)] mt-1.5">{edu.school}</p>
                   <p className="text-sm mt-4 italic" style={{ color: 'var(--muted-foreground)' }}>
                     Completed undergraduate program with a major in Computer Science & Engineering, building expertise across Software Quality Assurance, Data Analysis, and Frontend Technologies.

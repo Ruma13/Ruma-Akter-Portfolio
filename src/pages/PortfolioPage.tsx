@@ -91,50 +91,36 @@ const PortfolioPage: React.FC = () => {
           <SkillsList skills={PORTFOLIO_INFO.skills} isBar={true} />
         </section>
 
-{/* 💼 ১. EXPERIENCE SECTION */}
+{/* ====== EXPERIENCE SECTION ====== */}
         {PORTFOLIO_INFO.experience && PORTFOLIO_INFO.experience.length > 0 && (
-          <section id="experience" className="py-12 block">
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 tracking-wide uppercase block pb-1">
+          <section id="experience" className="py-12">
+            <h2 className="text-2xl font-bold tracking-wide uppercase pb-1" style={{ color: 'var(--foreground)' }}>
               Experience
             </h2>
-            <p className="mb-8 text-sm text-gray-600 dark:text-gray-400 mt-1 block">
+            <p className="mb-8 text-sm mt-1" style={{ color: 'var(--muted-foreground)' }}>
               Professional journey and industry experience.
             </p>
-            <div className="space-y-6 border-l-2 border-[var(--border)] pl-4 ml-2 block">
+            <div className="space-y-6 border-l-2 border-[var(--border)] pl-4 ml-2">
               {PORTFOLIO_INFO.experience.map((exp: any, index: number) => (
-                <div key={exp.id || index} className="relative block group">
-                  <div className="absolute -left-[22px] top-1.5 bg-[var(--brand)] h-3 w-3 rounded-full border-4 border-white dark:border-slate-950 group-hover:scale-125 transition-transform" />
-                  <div className="p-6 rounded-2xl bg-[var(--surface)] border border-[var(--border)] hover:border-[var(--brand)] transition-all block">
+                <div key={exp.id || index} className="relative group">
+                  <div className="absolute -left-[22px] top-1.5 bg-[var(--brand)] h-3 w-3 rounded-full border-4 border-[var(--background)] group-hover:scale-125 transition-transform" />
+                  <div className="p-6 rounded-2xl border transition-all" style={{ backgroundColor: 'var(--surface)', borderColor: 'var(--border)' }}>
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
-                      <h3 className="text-xl font-bold text-gray-900 dark:text-gray-50 block">
-                        {exp.title}
-                      </h3>
-                      <span className="text-xs text-gray-700 dark:text-gray-300 font-semibold bg-gray-100 dark:bg-gray-800 px-2.5 py-1 rounded-md w-fit border border-[var(--border)]">
+                      <h3 className="text-xl font-bold" style={{ color: 'var(--foreground)' }}>{exp.title}</h3>
+                      <span className="text-xs font-semibold px-2.5 py-1 rounded-md" style={{ color: 'var(--foreground)', backgroundColor: 'var(--border)' }}>
                         {exp.date.start} — {exp.date.end || "Present"}
                       </span>
                     </div>
-                    <h4 className="text-sm font-semibold text-[var(--brand)] mt-1 block">
-                      {exp.company} • <span className="text-gray-500 dark:text-gray-400 font-normal">{exp.location}</span>
+                    <h4 className="text-sm font-semibold text-[var(--brand)] mt-1">
+                      {exp.company} • <span style={{ color: 'var(--muted-foreground)' }}>{exp.location}</span>
                     </h4>
-                    <p className="text-sm text-gray-600 dark:text-gray-300 mt-3 italic block leading-relaxed">
-                      {exp.summary}
-                    </p>
+                    <p className="text-sm mt-3 italic leading-relaxed" style={{ color: 'var(--muted-foreground)' }}>{exp.summary}</p>
                     
-                    {exp.bullets && exp.bullets.length > 0 && (
-                      <ul className="mt-3 space-y-1.5 list-disc list-inside text-sm text-gray-700 dark:text-gray-300 block">
-                        {exp.bullets.map((bullet: string, i: number) => (
-                          <li key={i} className="text-gray-700 dark:text-gray-300">{bullet}</li>
-                        ))}
-                      </ul>
-                    )}
-
                     {exp.tech && (
-                      <div className="mt-4 flex flex-wrap gap-1.5 block">
+                      <div className="mt-4 flex flex-wrap gap-1.5">
                         {exp.tech.map((t: string, i: number) => (
-                          <span 
-                            key={i} 
-                            className="text-xs bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200 px-2.5 py-1 rounded-full border border-[var(--border)] font-semibold transition-all duration-300 transform hover:-translate-y-0.5 hover:bg-purple-700 hover:text-white dark:hover:bg-purple-600 dark:hover:text-white hover:border-purple-700 dark:hover:border-purple-600 cursor-default"
-                          >
+                          <span key={i} className="text-xs px-2.5 py-1 rounded-full border font-semibold transition-all hover:bg-purple-700 hover:text-white" 
+                                style={{ color: 'var(--foreground)', borderColor: 'var(--border)', backgroundColor: 'var(--border)' }}>
                             {t}
                           </span>
                         ))}
@@ -147,110 +133,43 @@ const PortfolioPage: React.FC = () => {
           </section>
         )}
 
-        {/* 📜 ২. CERTIFICATIONS SECTION */}
+        {/* ====== CERTIFICATIONS SECTION ====== */}
         {PORTFOLIO_INFO.certifications && PORTFOLIO_INFO.certifications.length > 0 && (
-          <section id="certificates" className="py-12 block">
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 tracking-wide uppercase block pb-1">
+          <section id="certificates" className="py-12">
+            <h2 className="text-2xl font-bold tracking-wide uppercase pb-1" style={{ color: 'var(--foreground)' }}>
               Certifications
             </h2>
-            <p className="mb-8 text-sm text-gray-600 dark:text-gray-400 mt-1 block">
+            <p className="mb-8 text-sm mt-1" style={{ color: 'var(--muted-foreground)' }}>
               Professional credentials and specialized training programs.
             </p>
-            <div className="space-y-4 block">
-              {PORTFOLIO_INFO.certifications.map((cert: any, index: number) => {
-                const isDataAnalyst = cert.name.toLowerCase().includes("data analyst");
-                
-                return (
-                  <div 
-                    key={index} 
-                    className={`p-6 rounded-2xl border transition-all duration-300 flex flex-col md:flex-row md:items-center justify-between gap-4 relative overflow-hidden block ${
-                      isDataAnalyst 
-                        ? "bg-gradient-to-r from-[var(--surface)] to-emerald-500/[0.03] border-emerald-500 dark:border-emerald-500/50 shadow-md" 
-                        : "bg-[var(--surface)] border-[var(--border)] hover:border-[var(--brand)]"
-                    }`}
-                  >
-                    <div className="flex-1 block">
-                      <div className="flex flex-wrap items-center gap-2 block">
-                        <h3 className="text-lg font-bold text-gray-900 dark:text-gray-50 block">
-                          {cert.name}
-                        </h3>
-                        {isDataAnalyst && (
-                          <span className="text-[10px] bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 px-2.5 py-0.5 rounded border border-emerald-500/30 font-bold tracking-wider uppercase">
-                            Featured
-                          </span>
-                        )}
-                      </div>
-                      <p className="text-sm font-semibold text-[var(--brand)] mt-0.5 block">{cert.issuer}</p>
-                      <p className="text-sm text-gray-600 dark:text-gray-300 mt-2 max-w-3xl leading-relaxed block">
-                        {cert.description}
-                      </p>
-                    </div>
-
-                    <div className="text-left md:text-right shrink-0 border-t md:border-t-0 pt-3 md:pt-0 border-[var(--border)] block">
-                      <span className="text-xs font-mono text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-gray-800 px-2.5 py-1 rounded-md border border-[var(--border)] font-medium">
-                        {cert.date}
-                      </span>
-                    </div>
-                  </div>
-                );
-              })}
+            <div className="space-y-4">
+              {PORTFOLIO_INFO.certifications.map((cert: any, index: number) => (
+                <div key={index} className="p-6 rounded-2xl border transition-all" style={{ backgroundColor: 'var(--surface)', borderColor: 'var(--border)' }}>
+                  <h3 className="text-lg font-bold" style={{ color: 'var(--foreground)' }}>{cert.name}</h3>
+                  <p className="text-sm font-semibold text-[var(--brand)] mt-0.5">{cert.issuer}</p>
+                  <p className="text-sm mt-2 leading-relaxed" style={{ color: 'var(--muted-foreground)' }}>{cert.description}</p>
+                </div>
+              ))}
             </div>
           </section>
         )}
 
-        {/* 🎓 ③. EDUCATION SECTION */}
+        {/* ====== EDUCATION SECTION ====== */}
         {PORTFOLIO_INFO.education && PORTFOLIO_INFO.education.length > 0 && (
-          <section id="education" className="py-12 block">
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 tracking-wide uppercase block pb-1">
+          <section id="education" className="py-12">
+            <h2 className="text-2xl font-bold tracking-wide uppercase pb-1" style={{ color: 'var(--foreground)' }}>
               Education
             </h2>
-            <p className="mb-6 text-sm text-gray-600 dark:text-gray-400 mt-1 block">
-              Academic qualification and educational background.
-            </p>
-            
-            <div className="max-w-4xl block">
-              {PORTFOLIO_INFO.education
-                .filter((edu: any) => edu.degree.includes("B.Sc."))
-                .map((edu: any, index: number) => (
-                  <div 
-                    key={index} 
-                    className="p-8 rounded-2xl bg-gradient-to-br from-[var(--surface)] via-[var(--surface)] to-[var(--brand)]/[0.02] border-2 border-[var(--border)] hover:border-[var(--brand)] shadow-lg transition-all duration-300 relative overflow-hidden block"
-                  >
-                    <div className="flex flex-col md:flex-row md:items-start justify-between gap-4 block">
-                      <div className="block">
-                        <div className="flex flex-wrap items-center gap-2 block">
-                          <span className="text-[10px] font-mono tracking-widest text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 px-2.5 py-1 rounded-md border border-emerald-500/20 font-bold uppercase">
-                            Degree Earned
-                          </span>
-                          <span className="text-[10px] font-mono tracking-widest text-purple-600 dark:text-purple-400 bg-purple-500/10 px-2.5 py-1 rounded-md border border-purple-500/20 font-bold uppercase">
-                            CGPA: 3.38
-                          </span>
-                        </div>
-                        
-                        <h3 className="text-2xl font-extrabold text-gray-900 dark:text-gray-50 mt-3 leading-tight tracking-tight block">
-                          {edu.degree}
-                        </h3>
-                        
-                        <p className="text-base font-semibold text-[var(--brand)] mt-1.5 block">
-                          {edu.school}
-                        </p>
-                      </div>
-
-                      <div className="shrink-0 block">
-                        <span className="text-xs font-mono font-bold text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-gray-800 px-3 py-1.5 rounded-md border border-[var(--border)] shadow-sm">
-                          {edu.date}
-                        </span>
-                      </div>
-                    </div>
-
-                    <div className="mt-6 pt-5 border-t border-[var(--border)] block">
-                      <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed block">
-                        Completed undergraduate program with a major in Computer Science & Engineering, building expertise across Software Quality Assurance, Data Analysis, and Frontend Technologies.
-                      </p>
-                    </div>
-
-                  </div>
-                ))}
+            <div className="max-w-4xl">
+              {PORTFOLIO_INFO.education.map((edu: any, index: number) => (
+                <div key={index} className="p-8 rounded-2xl border-2 transition-all mt-4" style={{ backgroundColor: 'var(--surface)', borderColor: 'var(--border)' }}>
+                  <h3 className="text-2xl font-extrabold" style={{ color: 'var(--foreground)' }}>{edu.degree}</h3>
+                  <p className="text-base font-semibold text-[var(--brand)] mt-1.5">{edu.school}</p>
+                  <span className="text-xs font-mono font-bold mt-2 inline-block px-3 py-1 rounded" style={{ color: 'var(--foreground)', backgroundColor: 'var(--border)' }}>
+                    CGPA: 3.38 • {edu.date}
+                  </span>
+                </div>
+              ))}
             </div>
           </section>
         )}

@@ -8,13 +8,13 @@ export const Footer: React.FC = () => {
         {/* Left: message */}
         <div>
           Designed &amp; coded with ☕ + ❤️ by{" "}
-          <span className="font-medium text-[var(--text)]">satya</span>
+          <span className="font-medium text-[var(--text)]">Ruma</span>
         </div>
 
         {/* Right: social icons */}
         <div className="flex items-center gap-4">
           <a
-            href="https://www.kaggle.com/satyasubudhi"
+            href="https://www.kaggle.com/rumaaktertushi"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Kaggle"
@@ -23,7 +23,7 @@ export const Footer: React.FC = () => {
             <SiKaggle size={40} />
           </a>
           <a
-            href="https://github.com/satya00089"
+            href="https://github.com/Ruma13"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub"
@@ -32,7 +32,7 @@ export const Footer: React.FC = () => {
             <SiGithub size={20} />
           </a>
           <a
-            href="https://www.linkedin.com/in/satya-subudhi/"
+            href="https://www.linkedin.com/in/ruma-akter-326799396/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"

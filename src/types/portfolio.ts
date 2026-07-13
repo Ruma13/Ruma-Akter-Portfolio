@@ -66,7 +66,7 @@ export type Skill = {
   level?: number; // 1-10 or %
   years?: number; // years of experience
   category?:
-    | "programming "
+    | "programming"
     | "analytics"
     | "library"
     | "frontend"

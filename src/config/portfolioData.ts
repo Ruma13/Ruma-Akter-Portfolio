@@ -12,8 +12,8 @@ export const PORTFOLIO_INFO: Portfolio = {
     title: "Data Analyst",
     headline: "MySQL · Python · Power BI · ETL",
     avatar: [
-      { url: "./Profile-place.png", label: "" },
-      { url: "./portfolio_img.jfif", label: "" },
+      { url: "./pp1.jpeg", label: "" },
+      { url: "./pp2.jpeg", label: "" },
     ],
     summary:
       "Computer Science and Engineering graduate with internship experience in Software Testing and Game Development. Passionate about Data Analytics, with hands-on skills in SQL, Python, Power BI, Excel, and MySQL. Currently focused on building a career by transforming data into meaningful business insights.",
@@ -212,7 +212,7 @@ export const PORTFOLIO_INFO: Portfolio = {
       description:
         "Developed an interactive sales analytics dashboard to evaluate revenue, customer purchasing behavior, product performance, and sales trends. Performed data cleaning, transformation, and analysis using SQL, Python, Excel, and Power BI to deliver actionable business insights for data-driven decision-making.",
       tags: ["Python", "Excel", "EDA", "Data Visualization", "Retail Analytics"],
-      image: "/sales_executive_dashboard.png",
+      image: "./sales_executive_dashboard.png",
       links: [
         {
           label: "GitHub",
@@ -228,7 +228,7 @@ export const PORTFOLIO_INFO: Portfolio = {
       description:
         "Designed an interactive banking dashboard to analyze transaction trends, customer activity, account performance, and financial metrics. Utilized SQL for data extraction, Python for preprocessing, and Power BI for creating insightful visualizations that support business reporting and operational decisions.",
       tags: ["Power BI", "SQL", "Python", "MySQL", "ETL", "Banking Analytics", "Dashboard"],
-      image: "/Online_Banking_Dashboard (1).jpg",
+      image: "./Online_Banking_Dashboard (1).jpg",
       links: [
         {
           label: "GitHub",
@@ -244,7 +244,7 @@ export const PORTFOLIO_INFO: Portfolio = {
       description:
         "Built a business intelligence dashboard to analyze restaurant revenue, customer loyalty, order trends, and menu performance. Leveraged SQL, Python, Excel, and Power BI to transform raw data into meaningful insights that help improve customer retention and business performance.",
       tags: ["Power BI", "SQL", "Python", "Excel", "Restaurant Analytics", "Customer Analytics", "ETL"],
-      image: "/kacci-dashboard (1).jpg",
+      image: "./kacci-dashboard (1).jpg",
       links: [
         {
           label: "GitHub",

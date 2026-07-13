@@ -88,6 +88,98 @@ const PortfolioPage: React.FC = () => {
           <SkillsList skills={PORTFOLIO_INFO.skills} isBar={true} />
         </section>
 
+        {/*  Experience Section */}
+        {PORTFOLIO_INFO.experience && PORTFOLIO_INFO.experience.length > 0 && (
+          <section id="experience" className="py-8">
+            <h2 className="text-2xl font-semibold text-[var(--brand)]">Experience</h2>
+            <p className="mb-6 text-sm text-gray-500 dark:text-gray-400 mt-1">
+              My professional journey and internship experience.
+            </p>
+            <div className="space-y-6 border-l-2 border-[var(--border)] pl-4 ml-2">
+              {PORTFOLIO_INFO.experience.map((exp: any, index: number) => (
+                <div key={exp.id || index} className="relative group">
+                  <div className="absolute -left-[22px] top-1.5 bg-[var(--brand)] h-3 w-3 rounded-full border-4 border-black group-hover:scale-125 transition-transform" />
+                  <div className="p-6 rounded-2xl bg-[var(--surface)] border border-[var(--border)] hover:border-[var(--brand)] transition-all">
+                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+                      <h3 className="text-xl font-bold text-white">{exp.title}</h3>
+                      <span className="text-xs text-gray-400 font-medium bg-[var(--border)] px-2 py-1 rounded-md w-fit">
+                        {exp.date.start} — {exp.date.end || "Present"}
+                      </span>
+                    </div>
+                    <h4 className="text-sm font-medium text-[var(--brand)] mt-1">
+                      {exp.company} • <span className="text-gray-400 font-normal">{exp.location}</span>
+                    </h4>
+                    <p className="text-sm text-gray-300 mt-3 italic">{exp.summary}</p>
+                    
+                    {exp.bullets && exp.bullets.length > 0 && (
+                      <ul className="mt-3 space-y-1.5 list-disc list-inside text-sm text-gray-400">
+                        {exp.bullets.map((bullet: string, i: number) => (
+                          <li key={i}>{bullet}</li>
+                        ))}
+                      </ul>
+                    )}
+
+                    {exp.tech && (
+                      <div className="mt-4 flex flex-wrap gap-1.5">
+                        {exp.tech.map((t: string, i: number) => (
+                          <span key={i} className="text-xs bg-black/40 text-[var(--brand)] px-2.5 py-1 rounded-full border border-[var(--border)]">
+                            {t}
+                          </span>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
+
+        {/*  Education Section */}
+        {PORTFOLIO_INFO.education && PORTFOLIO_INFO.education.length > 0 && (
+          <section id="education" className="py-8">
+            <h2 className="text-2xl font-semibold text-[var(--brand)]">Education</h2>
+            <p className="mb-6 text-sm text-gray-500 dark:text-gray-400 mt-1">
+              Academic qualifications and educational background.
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {PORTFOLIO_INFO.education.map((edu: any, index: number) => (
+                <div key={index} className="p-5 rounded-2xl bg-[var(--surface)] border border-[var(--border)] hover:border-[var(--brand)] transition-all">
+                  <span className="text-xs text-[var(--brand)] font-medium">{edu.date}</span>
+                  <h3 className="text-lg font-bold mt-1 text-white">{edu.degree}</h3>
+                  <h4 className="text-sm text-gray-400 mt-0.5">{edu.school}</h4>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
+
+        {/* Certifications Section */}
+        {PORTFOLIO_INFO.certifications && PORTFOLIO_INFO.certifications.length > 0 && (
+          <section id="certificates" className="py-8">
+            <h2 className="text-2xl font-semibold text-[var(--brand)]">Certifications</h2>
+            <p className="mb-6 text-sm text-gray-500 dark:text-gray-400 mt-1">
+              Professional credentials and training programs completed.
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {PORTFOLIO_INFO.certifications.map((cert: any, index: number) => (
+                <div key={index} className="p-5 rounded-2xl bg-[var(--surface)] border border-[var(--border)] flex flex-col justify-between hover:border-[var(--brand)] transition-all">
+                  <div>
+                    <div className="flex items-start justify-between gap-2">
+                      <h3 className="text-md font-bold text-white">{cert.name}</h3>
+                      <span className="text-[10px] text-gray-400 whitespace-nowrap bg-black/30 px-2 py-0.5 rounded-md">
+                        {cert.date}
+                      </span>
+                    </div>
+                    <p className="text-xs font-medium text-[var(--brand)] mt-1">{cert.issuer}</p>
+                    <p className="text-xs text-gray-400 mt-2 line-clamp-2">{cert.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
+
         <section id="contact" className="py-8">
           <h2 className="text-2xl font-semibold text-[var(--brand)]">Contact</h2>
           <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">

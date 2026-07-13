@@ -40,7 +40,6 @@ export const PORTFOLIO_INFO: Portfolio = {
           url: "https://github.com/Ruma13",
           icon: "SiGithub",
         },
-       
         {
           label: "Kaggle",
           url: "https://www.kaggle.com/rumaaktertushi",
